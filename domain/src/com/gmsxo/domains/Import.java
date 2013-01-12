@@ -19,12 +19,13 @@ public class Import {
    * @throws IOException 
    */
   public static void main(String[] args) throws SQLException, IOException {
-    //if (args.length != 1) {
-    //  System.err.println("USAGE: java Import pathToImportFileDir");
-    //  System.exit(-1);
-    //}
+    if (args.length != 1) {
+      System.err.println("USAGE: java Import pathToImportFileDir");
+      System.exit(-1);
+    }
     
     Path domainFilePath = Paths.get("C:\\Temp\\domains\\com011.txt");
+    //Path domainFilePath = Paths.get(args[0] );
     long counter = 0;
     String oldDomain = "";
     try (BufferedReader reader = Files.newBufferedReader(domainFilePath, StandardCharsets.UTF_8)) {

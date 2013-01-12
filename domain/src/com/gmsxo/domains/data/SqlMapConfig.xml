@@ -14,8 +14,11 @@
     errorTracingEnabled="true"
     />
   
-   <typeAlias alias="DomTest" type="com.gmsxo.domains.data.DomTest" />
-    
+  <typeAlias alias="DNSLookUpJob" type="com.gmsxo.domains.data.DNSLookUpJob" />
+  <typeAlias alias="Domain" type="com.gmsxo.domains.data.Domain" />
+  <typeAlias alias="IPAddress" type="com.gmsxo.domains.data.IPAddress" />
+  <typeAlias alias="DNSServerRequestCount" type="com.gmsxo.domains.data.DNSServerRequestCount" />
+  <typeAlias alias="DNSServer" type="com.gmsxo.domains.data.DNSServer" />
    
   <transactionManager type="JDBC">
     <dataSource type="SIMPLE">
