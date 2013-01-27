@@ -17,7 +17,8 @@
         <param name="Target" value="System.out" />
         <layout class="org.apache.log4j.PatternLayout">
         <!-- param name="ConversionPattern" value="[%d{ISO8601}][%-25.25t][%-5.5p][%m][%c][%F:%L]%n" / -->
-        <param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-4.4t|%.1p|%c{2}|%m|%F:%L%n" />
+        <!-- param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-4.4t|%.1p|%c{2}|%m|%F:%L%n" / -->
+        <param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-4.4t|%.5p|%c|%m|%F:%L%n" />
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
             <param name="LevelMin" value="TRACE" />
@@ -32,6 +33,17 @@
 
     <logger name="org.apache.catalina"><level value="WARN" /></logger>
     <logger name="org.apache.jasper"><level value="WARN" /></logger>
+    <logger name="org.hibernate"><level value="WARN" /></logger>
+    <logger name="com.mchange.v2"><level value="WARN" /></logger>
+    <logger name="net.sf.ehcache"><level value="INFO" /></logger>
+    <logger name="com.gmsxo.domains"><level value="TRACE" /></logger>
+    <logger name="org.hibernate.engine.jdbc.spi.SqlExceptionHelper"><level value="OFF" /></logger>
+    <logger name="org.hibernate.engine.jdbc.batch.internal.BatchingBatch"><level value="OFF" /></logger>
+    
+    
+    
+    
+    
     
 
 	<logger name="org.apache.axis2"><level value="FATAL" /></logger>
@@ -40,6 +52,8 @@
 	<logger name="de.hunsicker.jalopy.io"><level value="FATAL" /></logger>
 	<logger name="httpclient.wire.header"><level value="WARN" /></logger>
 	<logger name="org.apache.commons.httpclient"><level value="FATAL" /></logger>
+	<logger name="org.jboss.logging"><level value="WARN" /></logger>
+	
 
 
     <logger name="com.xgames.gatewayclientlight"><level value="DEBUG" /></logger>
