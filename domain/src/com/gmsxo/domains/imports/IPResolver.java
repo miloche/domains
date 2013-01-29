@@ -31,10 +31,10 @@ public class IPResolver {
   public IPResolver(String workingDir) { this.workingDir=workingDir; }
 
   public static void main(String[] args) throws IOException, NamingException {
-    /*args=new String[3];
+    args=new String[3];
     args[0]="C:\\Temp\\domains\\import\\";
     args[1]="5";
-    args[2]="50";*/
+    args[2]="50000";
     for (String str:args) System.out.println(str);
     if (args.length!=3) {
       System.err.println("Usage IPResolver workingDir threadCount domainsForFile");
@@ -77,10 +77,11 @@ public class IPResolver {
     
     while (true) {
       long startTime=new Date().getTime();
+      requestCounter=0;
       String domainFileName=getNextFile(); // get the next file from working directory
       if (domainFileName==null) break;     // if there is none -> end
       topLevel=getTopLevel(domainFileName); // init topLevel domain from the file name
-      if (topLevel.equals(".us")) dnsSplit=3;
+      if (topLevel.equals(".us")||topLevel.equals(".biz")) dnsSplit=3;
       else dnsSplit=2;
       lastDomain=new Domain();
       
