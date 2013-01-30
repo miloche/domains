@@ -48,7 +48,7 @@ public class NSLookupThread implements Callable<NSLookupThread.Result> {
       parseAttributes(domain, DNSLookup.nsLookUp(domain.getDomainName(), domain.getDnsServer().get(0).getDomainName()));
     } catch (NamingException e) {
       LOG.debug(domain+"/"+e.getExplanation()+"/"+e.getResolvedName()+"/"+e.getRemainingName()+"/"+e.getMessage());
-      for(Entry<String, String> entry:IPAddress.errorMap.entrySet()) if (e.getExplanation().contains(entry.getKey())) domain.setIPAddress(new IPAddress(entry.getValue()));
+      for(Entry<String, String> entry:IPAddress.errorMap.entrySet()) if (e.getExplanation()!=null&&e.getExplanation().contains(entry.getKey())) domain.setIPAddress(new IPAddress(entry.getValue()));
       if (domain.getIpAddress()==null) domain.setIPAddress(new IPAddress("ERROR"));
       wasError=true;
     }
