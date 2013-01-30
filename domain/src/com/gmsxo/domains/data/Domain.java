@@ -2,8 +2,10 @@ package com.gmsxo.domains.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+
 
 import javax.persistence.CascadeType; 
 import javax.persistence.Column;
@@ -85,7 +87,7 @@ public class Domain implements Serializable { private static final long serialVe
     return this;
   }
   public List<DNSServer> getDnsServer() {
-    return dnsServer;
+    return Collections.unmodifiableList(dnsServer);
   }
   public Domain setDnsServer(List<DNSServer> dnsServer) {
     if (dnsServer==null) this.dnsServer=new LinkedList<>();

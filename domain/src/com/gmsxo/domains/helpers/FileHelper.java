@@ -23,7 +23,7 @@ import org.apache.log4j.Logger;
 import com.gmsxo.domains.dns.DNSLookup;
 
 public final class FileHelper {
-  private static final Logger LOG = Logger.getLogger(FileHelper.class); 
+  @SuppressWarnings("unused") private static final Logger LOG = Logger.getLogger(FileHelper.class); 
   private FileHelper() {}
   
   public static List<String> getFiles(String dirName, String extension) throws IOException {
@@ -31,7 +31,6 @@ public final class FileHelper {
     try (DirectoryStream<Path> ds=Files.newDirectoryStream(FileSystems.getDefault().getPath(dirName))) {
       for (Path path : ds) {
         File file = path.toFile();
-        LOG.info(file.getName());
         if(file.isFile()&&(extension==null||extension.length()==0||file.getName().endsWith(extension))) paths.add(file.getName());
       }
     } 

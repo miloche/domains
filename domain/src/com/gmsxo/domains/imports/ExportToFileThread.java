@@ -16,6 +16,8 @@ import com.gmsxo.domains.data.Domain;
 
 public class ExportToFileThread implements Runnable {
   private static final Logger LOG=Logger.getLogger(ExportToFileThread.class);
+  private static final char   DELIMITER=' ';
+  
   private String outputFilePathName;
   private List<Domain> domains=new LinkedList<Domain>();
   private boolean interrupted=false;
@@ -43,9 +45,7 @@ public class ExportToFileThread implements Runnable {
           break;
         }
       }
-    } catch (IOException e) {
-      LOG.error("IO",e);
-    } 
+    } catch (IOException e) { LOG.error("IO",e); } 
   }
   
   public synchronized void addDomains(Domain domain) {
@@ -54,18 +54,11 @@ public class ExportToFileThread implements Runnable {
   }
   
   private synchronized List<Domain> getDomains() {
-    if (domains.size()==0 || !interrupted)
-      try {
-        wait();
-      } catch (InterruptedException e) {
-        interrupted=true;
-      }
+    if (domains.size()==0 || !interrupted)  try {  wait();  } catch (InterruptedException e) {  interrupted=true;   }
     List<Domain> retVal=domains;
     domains=new LinkedList<Domain>();
     return retVal;
   }
-  
-  private static final char DELIMITER=' ';
   
   private static String format(Domain domain) {
     StringBuilder sb=new StringBuilder();
@@ -81,5 +74,4 @@ public class ExportToFileThread implements Runnable {
     }
     return sb.toString();
   }
-
 }

@@ -10,5 +10,7 @@ public class HelloWorld {
    */
   public static void main(String[] args) {
     LOG.debug("Hello world!" + (args.length > 0? " " + args[0]:""));
+    while (true)
+      ;
   }
 }

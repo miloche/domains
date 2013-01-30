@@ -1,8 +1,10 @@
 package com.gmsxo.domains.data;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,6 +20,26 @@ import org.hibernate.annotations.Index;
 @Entity
 @Table(name = "IP_ADDRESS", uniqueConstraints = {@UniqueConstraint(columnNames="ipAddress", name="IP_ADDRESS_CONS")})
 public class IPAddress implements Serializable { private static final long serialVersionUID = -8238580043625483358L;
+public static final Map<String,String> errorMap=new HashMap<>();
+static {
+  errorMap.put("NO IP Address", "NO_IP_ADDRESS");
+  errorMap.put("Unknown DNS server", "UNKNOWN_DNS_SERVER");
+  errorMap.put("DNS service refused", "DNS_SERVICE_REFUSED");
+  errorMap.put("DNS server failure", "DNS_SERVER_FAILURE");
+  errorMap.put("DNS name not found", "DNS_NAME_NOT_FOUND");
+  errorMap.put("DNS error", "DNS_ERROR");
+  errorMap.put("NULL IP", "NULL_IP");
+  errorMap.put("ERROR", "ERROR");
+}
+public static final String[] errors = new String[]
+    { "NO IP Address",
+      "Unknown DNS server",
+       "DNS service refused",
+       "DNS server failure",
+       "DNS name not found",
+       "DNS error",
+       "NULL IP",
+       "ERROR"};
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "IPAddressIdSeq")

@@ -7,7 +7,10 @@ import javax.naming.directory.InitialDirContext;
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
 
+import org.apache.log4j.Logger;
+
 import com.gmsxo.domains.data.DNSServer;
+import com.gmsxo.domains.data.IPAddress;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -16,6 +19,27 @@ import java.util.LinkedList;
 import java.util.List;
 
 public final class DNSLookup { private DNSLookup() {}
+private static Logger LOG = Logger.getLogger(DNSLookup.class);
+public static void main(String args[]) throws NamingException {
+  List<DNSServer> dns = new LinkedList<DNSServer>();
+  dns.add(new DNSServer("ns1.mdnsservice.com"));
+  dns.add(new DNSServer("ns2.mdnsservice.com"));
+  dns.add(new DNSServer("ns3.mdnsservice.com"));
+  Attributes attrs = nsLookUp("apmlandscape.com", dns);
+  
+  if (attrs!=null) {
+    Attribute attrNS = attrs.get("NS");
+    if (attrNS!=null) {
+      NamingEnumeration<?> allNS = attrNS.getAll();
+      if (allNS!=null) while(allNS.hasMoreElements()) LOG.info(new DNSServer(DNSLookup.removeDot(allNS.next().toString())));
+    }
+
+    Attribute attrA = attrs.get("A");
+    if (attrA!=null) LOG.info(new IPAddress((String)attrA.get()));
+  }
+  //if (domain.getIpAddress()==null) domain.setIPAddress(DBFacade.getNullIP());
+  //if (domain.getIpAddress()==null||domain.getIpAddress().getIpAddress()==null) domain.setIPAddress(new IPAddress("NULL"));
+}
   //private static final Logger LOG=Logger.getLogger(DNSLookup.class);
   private static final String GOOGLE_DNS="dns://google-public-dns-a.google.com dns://google-public-dns-b.google.com";
   
@@ -57,12 +81,11 @@ public final class DNSLookup { private DNSLookup() {}
     //LOG.info("nsLookUp: " + domainName + " dns: " + dns);
     Hashtable<String, Object> env = new Hashtable<String, Object>();
     env.put("java.naming.factory.initial", "com.sun.jndi.dns.DnsContextFactory");
-    //StringBuilder dnsServers = new StringBuilder("");        
-    //for( DNSServer dnsServer : dns ) 
-    //  dnsServers.append("dns://").append(dnsServer.getDomainName()).append(" ");
+    StringBuilder dnsServers = new StringBuilder("");        
+    for( DNSServer dnsServer : dns ) dnsServers.append("dns://").append(dnsServer.getDomainName()).append(" ");
     //LOG.debug(dnsServers.toString());
-    //env.put("java.naming.provider.url", dnsServers.toString());
-    env.put("java.naming.provider.url", GOOGLE_DNS);
+    env.put("java.naming.provider.url", dnsServers.toString());
+    //env.put("java.naming.provider.url", GOOGLE_DNS);
     
     env.put("com.sun.jndi.dns.recursion", "true");
 

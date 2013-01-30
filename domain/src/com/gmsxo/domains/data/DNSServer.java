@@ -23,6 +23,11 @@ import org.hibernate.annotations.Index;
 @Table( name = "DNS_SERVER", uniqueConstraints = {@UniqueConstraint(columnNames="domainName", name="DOMAIN_NAME_CONS")}  )
 public class DNSServer implements Serializable {
 
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 5268378373876358885L;
+
   @Id
   @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="DNSServerIdSeq")
   @SequenceGenerator( name = "DNSServerIdSeq", sequenceName="DNS_SERVER_ID_SEQ", allocationSize=1, initialValue=1)

@@ -31,10 +31,10 @@ public class IPResolver {
   public IPResolver(String workingDir) { this.workingDir=workingDir; }
 
   public static void main(String[] args) throws IOException, NamingException {
-    args=new String[3];
+    /*args=new String[3];
     args[0]="C:\\Temp\\domains\\import\\";
     args[1]="5";
-    args[2]="50000";
+    args[2]="50";*/
     for (String str:args) System.out.println(str);
     if (args.length!=3) {
       System.err.println("Usage IPResolver workingDir threadCount domainsForFile");
@@ -61,6 +61,7 @@ public class IPResolver {
   private String topLevel;
   private static long requestCounter=0;
   private static long resultCounter=0;
+  private static long errorCounter=0;
   private String line="";
   private int dnsSplit=2;
   
@@ -78,6 +79,7 @@ public class IPResolver {
     while (true) {
       long startTime=new Date().getTime();
       requestCounter=0;
+      errorCounter=0;
       String domainFileName=getNextFile(); // get the next file from working directory
       if (domainFileName==null) break;     // if there is none -> end
       topLevel=getTopLevel(domainFileName); // init topLevel domain from the file name
@@ -116,7 +118,8 @@ public class IPResolver {
             try { // try to get results
               NSLookupThread.Result result=nsLookupResultList.get(i).get();
               if (result.getDomain()!=null) export.addDomains(result.getDomain()); // if there is a result send it to the export thread
-              LOG.debug(resultCounter+" / "+result.getDomain());
+              if (result.getError()) errorCounter++;
+              LOG.trace(resultCounter+" / "+result.getDomain());
               resultCounter++;
               if (line!=null) { // was there still a line in the import file?
                 nsLookupResultList.set(i,nsLookupPool.submit(new NSLookupThread(getNextDomain()))); // replace finished thread with a new one
@@ -138,17 +141,15 @@ public class IPResolver {
       Files.delete(Paths.get(workingDir+WORKING+domainFileName));
       BigDecimal totalTime=BigDecimal.valueOf((new Date().getTime()-startTime)/1000d).setScale(2, BigDecimal.ROUND_HALF_EVEN);
       BigDecimal perSecond=BigDecimal.valueOf(requestCounter).divide(totalTime, 2, BigDecimal.ROUND_HALF_EVEN);
-      LOG.warn("Total time:"+totalTime+" per sec: "+perSecond +" "+domainFileName);
+      LOG.warn("Requests: "+requestCounter+" errors:"+errorCounter+" Total time:"+totalTime+" per sec: "+perSecond+" "+domainFileName);
     }
   }
   private Domain getNextDomain() throws IOException {
-    LOG.debug("getNextDomain()");
     Domain returnDomain = null;
     DNSServer dnsServer=null;
     String domainName=null;
     while (true) {
       line = reader.readLine();
-      LOG.debug(line);
       if (line!=null) {
         if (!line.matches(DNSHelper.DOMAIN_REGEXP)) continue;
         String[] split=line.split(" ",-1);
@@ -157,12 +158,12 @@ public class IPResolver {
         dnsServer = new DNSServer(DNSLookup.formatDNS(split[dnsSplit],topLevel));
       }
       if (line!=null&&domainName.equals(lastDomain.getDomainName())) { // it is the same domain, add DNS server and continue
-        lastDomain.getDnsServer().add(dnsServer);
+        lastDomain.addDnsServer(dnsServer);
         continue;
       } else { // it is the next domain, create new domain, update return domain and update the last domain with the new one
         Domain domain=new Domain();
         domain.setDomainName(domainName);
-        domain.getDnsServer().add(dnsServer);
+        domain.addDnsServer(dnsServer);
         
         if (lastDomain.getDomainName()==null) { // the first line
           lastDomain=domain;
@@ -173,7 +174,7 @@ public class IPResolver {
         break;
       }
     }
-    LOG.debug("returned: "+returnDomain);
+    LOG.trace("returned: "+returnDomain);
     return returnDomain;
   }
   private void checkDirs() throws IOException {
