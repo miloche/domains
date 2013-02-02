@@ -22,10 +22,10 @@ public final class DNSLookup { private DNSLookup() {}
 private static Logger LOG = Logger.getLogger(DNSLookup.class);
 public static void main(String args[]) throws NamingException {
   List<DNSServer> dns = new LinkedList<DNSServer>();
-  dns.add(new DNSServer("ns1.mdnsservice.com"));
-  dns.add(new DNSServer("ns2.mdnsservice.com"));
-  dns.add(new DNSServer("ns3.mdnsservice.com"));
-  Attributes attrs = nsLookUp("apmlandscape.com", dns);
+  dns.add(new DNSServer("ns.dnssek.org"));
+  //dns.add(new DNSServer("ns2.mdnsservice.com"));
+  //dns.add(new DNSServer("ns3.mdnsservice.com"));
+  Attributes attrs = nsLookUp("dnsseccert.us", dns, 1000);
   
   if (attrs!=null) {
     Attribute attrNS = attrs.get("NS");
@@ -41,7 +41,7 @@ public static void main(String args[]) throws NamingException {
   //if (domain.getIpAddress()==null||domain.getIpAddress().getIpAddress()==null) domain.setIPAddress(new IPAddress("NULL"));
 }
   //private static final Logger LOG=Logger.getLogger(DNSLookup.class);
-  private static final String GOOGLE_DNS="dns://google-public-dns-a.google.com dns://google-public-dns-b.google.com";
+  //private static final String GOOGLE_DNS="dns://google-public-dns-a.google.com dns://google-public-dns-b.google.com";
   
   public static String removeDot(String rawDomain) {
     if (rawDomain==null || rawDomain.length()==0) return rawDomain;
@@ -64,33 +64,39 @@ public static void main(String args[]) throws NamingException {
   }
 
 
-  public static Attributes reverseNsLookup(String ip, String dns) throws NamingException {
+  public static Attributes reverseNsLookup(String ip, String dns, int timeout) throws NamingException {
     final String[] bytes = ip.split("\\.");
     final String reverseDnsDomain = bytes[3] + "." + bytes[2] + "." + bytes[1] + "." + bytes[0] + ".in-addr.arpa";
-    return nsLookUp(reverseDnsDomain, dns);
+    return nsLookUp(reverseDnsDomain, dns, timeout);
   }
   
-  public static Attributes nsLookUp(String domainName, String dns) throws NamingException {
+  public static Attributes nsLookUp(String domainName, String dns, int timeout) throws NamingException {
     DNSServer dnsServer = new DNSServer(dns);
     List<DNSServer> dnsServers = new LinkedList<>();
     dnsServers.add(dnsServer);
-    return nsLookUp(domainName, dnsServers);
+    return nsLookUp(domainName, dnsServers, timeout);
   }
 
-  public static Attributes nsLookUp(String domainName, List<DNSServer> dns) throws NamingException {
+  public static Attributes nsLookUp(String domainName, List<DNSServer> dns, int timeout) throws NamingException {
     //LOG.info("nsLookUp: " + domainName + " dns: " + dns);
     Hashtable<String, Object> env = new Hashtable<String, Object>();
-    env.put("java.naming.factory.initial", "com.sun.jndi.dns.DnsContextFactory");
+    env.put("java.naming.factory.initial", "com.gmsxo.domains.dns.dnsclient.DnsContextFactory");
+    //env.put("java.naming.factory.initial", "com.sun.jndi.ldap.LdapCtxFactory");
+    
     StringBuilder dnsServers = new StringBuilder("");        
     for( DNSServer dnsServer : dns ) dnsServers.append("dns://").append(dnsServer.getDomainName()).append(" ");
     //LOG.debug(dnsServers.toString());
     env.put("java.naming.provider.url", dnsServers.toString());
     //env.put("java.naming.provider.url", GOOGLE_DNS);
     
-    env.put("com.sun.jndi.dns.recursion", "true");
-
+    //env.put("com.sun.jndi.dns.recursion", "true");
+    env.put("com.sun.jndi.dns.timeout.initial", ""+timeout);
+    env.put("com.sun.jndi.dns.timeout.retries", "1");
+    LOG.debug("5 "+domainName);
     DirContext ictx = new InitialDirContext(env);
-    return ictx.getAttributes(domainName, new String[]{"A", "AAAA", "NS", "CNAME", "SOA", "PTR", "MX", "TXT", "HINFO", "NAPTR", "SRV"});
+    LOG.debug("6 "+domainName);
+    //return ictx.getAttributes(domainName, new String[]{"A", "AAAA", "NS", "CNAME", "SOA", "PTR", "MX", "TXT", "HINFO", "NAPTR", "SRV"});
+    return ictx.getAttributes(domainName, new String[]{"A", "NS"});
   }
 
   public static void nsLookUp1(String domainName) {

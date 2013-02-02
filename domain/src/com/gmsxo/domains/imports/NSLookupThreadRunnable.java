@@ -1,7 +1,6 @@
 package com.gmsxo.domains.imports;
 
 import java.util.Map.Entry;
-import java.util.concurrent.Callable;
 
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
@@ -15,13 +14,13 @@ import com.gmsxo.domains.data.Domain;
 import com.gmsxo.domains.data.IPAddress;
 import com.gmsxo.domains.dns.DNSLookup;
 
-public class NSLookupThread implements Callable<NSLookupThread.Result> {
-  private static final Logger LOG = Logger.getLogger(NSLookupThread.class);
+public class NSLookupThreadRunnable implements Runnable {
+  private static final Logger LOG = Logger.getLogger(NSLookupThreadRunnable.class);
   public static String topLevel;
   private Domain domain;
+  private Result result;
   private int timeout;
-  
-  public NSLookupThread(Domain domain, int timeout) { this.domain=domain; this.timeout=timeout;}
+  public NSLookupThreadRunnable(Domain domain, Result result, int timeout) { this.domain=domain; this.result=result; this.timeout=timeout; }
   
   private void parseAttributes(Domain domain, Attributes attrs) throws NamingException {
     LOG.debug("4 "+domain);
@@ -43,9 +42,12 @@ public class NSLookupThread implements Callable<NSLookupThread.Result> {
   }
   
   @Override
-  public Result call() throws Exception {
+  public void run()  {
     LOG.debug("Thr.:"+domain);
-    if (domain==null) return new Result(domain,true);
+    if (domain==null) {
+      result.error=true;
+      return;
+    }
     boolean wasError=false;
     try {
       parseAttributes(domain, DNSLookup.nsLookUp(domain.getDomainName(), domain.getDnsServer().get(0).getDomainName(), timeout));
@@ -59,14 +61,17 @@ public class NSLookupThread implements Callable<NSLookupThread.Result> {
     }
     catch (Exception e) { LOG.info(domain+"/"+e.getMessage(),e); wasError=true;}
     LOG.debug("3 "+domain);
-    return new Result(domain,wasError);
+    result.error=wasError;
   }
 
   public static class Result {
     private Domain domain;
     private boolean error;
+    private boolean isDone;
     public Result(Domain domain){ this.domain=domain; } public Result(Domain domain,boolean error){this.domain=domain; this.error=error;}
     public Domain getDomain(){return domain;}
     public boolean getError() {return error;}
+    synchronized void setIsDone(boolean isDone) {this.isDone=isDone;}
+    synchronized boolean getIsDone() {return this.isDone;}
   }
 }

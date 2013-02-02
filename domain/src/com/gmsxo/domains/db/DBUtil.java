@@ -20,25 +20,25 @@ public class DBUtil {
   try {
     Configuration configuration = new Configuration()
       .setProperty("hibernate.connection.driver_class", "org.postgresql.Driver")
-      //.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/domains")
-      .setProperty("hibernate.connection.url", "jdbc:postgresql://192.168.1.102:5432/domains")
+      .setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/domains")
+      //.setProperty("hibernate.connection.url", "jdbc:postgresql://192.168.1.102:5432/domains")
       //.setProperty("hibernate.connection.url", "jdbc:postgresql://li583-99.members.linode.com/domains")
       .setProperty("hibernate.connection.username", "domains")
       .setProperty("hibernate.connection.password", "passwd")
       .setProperty("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider")
       
-      .setProperty("hibernate.hbm2ddl.auto", "update")
+      .setProperty("hibernate.hbm2ddl.auto", "create")
       .setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL82Dialect")
       
       .setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy")
       .setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy")
       
-      .setProperty("hibernate.jdbc.batch_size", "150")
+      .setProperty("hibernate.jdbc.batch_size", "100")
 
       .setProperty("hibernate.cache.provider_class", "org.hibernate.cache.EhCacheProvider")
       .setProperty("hibernate.cache.use_second_level_cache", "false")
       .setProperty("hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory")
-      .setProperty("hibernate.cache.use_query_cache", "true")
+      .setProperty("hibernate.cache.use_query_cache", "false")
       .setProperty("net.sf.ehcache.configurationResourceName", "/com/gmsxo/domains/db/ehcache.xml")
       
       .setProperty("hibernate.show_sql", "false")
@@ -47,8 +47,10 @@ public class DBUtil {
       .setProperty("hibernate.c3p0.min_size", "5")
       .setProperty("hibernate.c3p0.max_size", "300")
       .setProperty("hibernate.c3p0.timeout", "300")
-      .setProperty("hibernate.c3p0.max_statements", "300")
+      .setProperty("hibernate.c3p0.max_statements", "150")
       .setProperty("hibernate.c3p0.idle_test_period", "3000")
+      .setProperty("hibernate.debugUnreturnedConnectionStackTraces", "true")
+      .setProperty("hibernate.c3p0.unreturnedConnectionTimeout", "1000")
       .setProperty("hibernate.current_session_context_class", "thread")
       
       
@@ -68,6 +70,11 @@ public class DBUtil {
         session.beginTransaction();
         session.createSQLQuery("create unique index DOMAIN_DNS_SERVER_LNK_DOMAIN_ID_IDX on domain_dns_server_lnk (domain_id, dns_server_id)").executeUpdate();
         session.createSQLQuery("create index DOMAIN_DNS_SERVER_LNK_DNS_SERVER_ID_IDX on domain_dns_server_lnk (dns_server_id, domain_id)").executeUpdate();
+        session.createSQLQuery("ALTER TABLE domain ALTER COLUMN id SET DEFAULT nextval('domain_id_seq')").executeUpdate();
+        session.createSQLQuery("ALTER TABLE dns_server ALTER COLUMN id SET DEFAULT nextval('dns_server_id_seq')").executeUpdate();
+        session.createSQLQuery("ALTER TABLE domain_dns_server_lnk ALTER COLUMN id SET DEFAULT nextval('domain_dns_server_lnk_id_seq')").executeUpdate();
+        session.createSQLQuery("ALTER TABLE ip_address ALTER COLUMN id SET DEFAULT nextval('ip_address_id_seq')").executeUpdate();
+        
         
         for (int id=1;id<=IPAddress.errors.length;id++) {
           session.createSQLQuery("insert into ip_address (id,ip_address) values ("+id+",'"+IPAddress.errors[id-1]+"')").executeUpdate();

@@ -15,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -35,6 +36,13 @@ public final class FileHelper {
       }
     } 
     return paths;
+  }
+  
+  public static String getNextFile(String dir, String ext) throws IOException {
+    List<String> files = FileHelper.getFiles(dir, ext);
+    Collections.sort(files);
+    if (files==null||files.size()<1) return null;
+    return files.get(0);
   }
   
   public static void cutFileIntoParts(String sourceDirName, String sourceFileName, String targetDirName, int parts, String appendix) throws IOException {

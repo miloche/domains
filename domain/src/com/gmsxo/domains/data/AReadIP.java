@@ -54,7 +54,7 @@ public class AReadIP {
     LOG.info("-----");
     
     
-    Attributes attrs = DNSLookup.nsLookUp("BUSINESSMERIT.COM", "8.8.4.4");
+    Attributes attrs = DNSLookup.nsLookUp("BUSINESSMERIT.COM", "8.8.4.4",1000);
     NamingEnumeration<? extends Attribute> enumAttrs = attrs.getAll();
     while(enumAttrs.hasMoreElements()) {
       Attribute attr = enumAttrs.next();

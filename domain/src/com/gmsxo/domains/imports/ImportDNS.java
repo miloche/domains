@@ -30,17 +30,17 @@ public class ImportDNS {
   public static void main(String[] args) throws IOException, NamingException {
     //while (!DBFacade.initialized)
     //  ;
-    if (args.length != 5) {
+    if (args.length != 6) {
       try {
-        new ImportDNS().doThreadJob("C:\\Temp\\domains\\full-zone.com.cut",".com",150,150,1500);
+        new ImportDNS().doThreadJob("C:\\Temp\\domains\\full-zone.com.cut",".com",150,150,1500,1000);
       } catch (Exception e) {
-        System.err.println("USAGE: java ImportDNS pathToImportFileDir poolSize requestCount");
+        System.err.println("USAGE: java ImportDNS pathToImportFileDir poolSize requestCount timeout");
         LOG.error("main",e);
         System.exit(-1);
       }
     }else {
       NSLookupThread.topLevel=args[1];
-      new ImportDNS().doThreadJob(args[0],args[1],Integer.parseInt(args[2]),Integer.parseInt(args[3]),Integer.parseInt(args[4]));
+      new ImportDNS().doThreadJob(args[0],args[1],Integer.parseInt(args[2]),Integer.parseInt(args[3]),Integer.parseInt(args[4]),Integer.parseInt(args[4]));
     }
     //DBUtil.close();
     LOG.info("lines: " + counter + " requests: "+requestCounter+" results: "+resultCounter);
@@ -89,7 +89,7 @@ public class ImportDNS {
   static long requestCounter=0;
   static long resultCounter=0;
   
-  public void doThreadJob(final String fileName, String topLevel, final int poolSize, final int pool2Size, final int requestCount) {
+  public void doThreadJob(final String fileName, String topLevel, final int poolSize, final int pool2Size, final int requestCount, final int timeout) {
     final int  DNS_LOOKUP_POOL_SIZE=poolSize;
     final int  INSERT_DOMAIN_POOL_SIZE=pool2Size;
     final long REQUEST_COUNT=requestCount;
@@ -109,12 +109,12 @@ public class ImportDNS {
       // fill the pool
       
       for (int i=0;i<(DNS_LOOKUP_POOL_SIZE<REQUEST_COUNT?DNS_LOOKUP_POOL_SIZE:REQUEST_COUNT)&&line!=null;i++) {
-        nsLookupResultList.add(nsLookupPool.submit(new NSLookupThread(getNextDomain())));
+        nsLookupResultList.add(nsLookupPool.submit(new NSLookupThread(getNextDomain(),timeout)));
         requestCounter++;
       }
       
       // finish the input file
-      int indexInInsertDomainResultList=0;
+      //int indexInInsertDomainResultList=0;
       for (int i=0;;) {
         if (nsLookupResultList.get(i).isDone()) {
           try {
@@ -141,7 +141,7 @@ public class ImportDNS {
             //DBFacade.saveOrUpdateDomain(result.getDomain());
             resultCounter++;
             if (requestCounter<=REQUEST_COUNT&&line!=null) {
-              nsLookupResultList.set(i,nsLookupPool.submit(new NSLookupThread(getNextDomain())));
+              nsLookupResultList.set(i,nsLookupPool.submit(new NSLookupThread(getNextDomain(),timeout)));
               requestCounter++;
             }
             else {

@@ -30,7 +30,7 @@ public class ExportToFileThread implements Runnable {
 
   @Override
   public void run() {
-    try (BufferedWriter output=Files.newBufferedWriter(Paths.get(outputFilePathName),StandardCharsets.UTF_8, StandardOpenOption.CREATE)) {
+    try (BufferedWriter output=Files.newBufferedWriter(Paths.get(outputFilePathName),StandardCharsets.UTF_8, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)) {
       List<Domain> domainsToWrite=null;
       while (true) {
         domainsToWrite=getDomains();
@@ -42,6 +42,7 @@ public class ExportToFileThread implements Runnable {
           output.flush();
           output.close();
           Files.move(Paths.get(outputFilePathName), Paths.get(finalFile), StandardCopyOption.REPLACE_EXISTING);
+          LOG.debug("moved");
           break;
         }
       }

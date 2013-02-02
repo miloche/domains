@@ -9,7 +9,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -36,11 +35,11 @@ public class IPResolver {
     args[1]="5";
     args[2]="50";*/
     for (String str:args) System.out.println(str);
-    if (args.length!=3) {
-      System.err.println("Usage IPResolver workingDir threadCount domainsForFile");
+    if (args.length!=4) {
+      System.err.println("Usage IPResolver workingDir threadCount domainsForFile timeout");
       System.exit(-1);
     }
-    new IPResolver(args[0]).doJob(Integer.parseInt(args[1]),Integer.parseInt(args[2]));
+    new IPResolver(args[0]).doJob(Integer.parseInt(args[1]),Integer.parseInt(args[2]),Integer.parseInt(args[3]));
   }
   //private static final String REGEX="^[A-Z0-9]([A-Z0-9\\-\\.]*){1}( NS | IN NS ){1}[A-Z0-9]([A-Z0-9\\-\\.]*){1}$";
   
@@ -70,7 +69,7 @@ public class IPResolver {
     return null;
   }
   
-  public void doJob(final int poolSize, final int domainsInfCutFile) throws IOException {
+  public void doJob(final int poolSize, final int domainsInfCutFile, int timeout) throws IOException {
     final int  DNS_LOOKUP_POOL_SIZE=poolSize;
 
     checkDirs();
@@ -80,7 +79,7 @@ public class IPResolver {
       long startTime=new Date().getTime();
       requestCounter=0;
       errorCounter=0;
-      String domainFileName=getNextFile(); // get the next file from working directory
+      String domainFileName=FileHelper.getNextFile(workingDir+WORKING, CUT_FILE_EXT); // get the next file from working directory
       if (domainFileName==null) break;     // if there is none -> end
       topLevel=getTopLevel(domainFileName); // init topLevel domain from the file name
       if (topLevel.equals(".us")||topLevel.equals(".biz")) dnsSplit=3;
@@ -107,7 +106,7 @@ public class IPResolver {
         
         // fill the thread pool
         for (int i=0;i<DNS_LOOKUP_POOL_SIZE&&line!=null;i++) {
-          nsLookupResultList.add(nsLookupPool.submit(new NSLookupThread(getNextDomain())));
+          nsLookupResultList.add(nsLookupPool.submit(new NSLookupThread(getNextDomain(),timeout)));
           requestCounter++;
         }
         
@@ -122,7 +121,7 @@ public class IPResolver {
               LOG.trace(resultCounter+" / "+result.getDomain());
               resultCounter++;
               if (line!=null) { // was there still a line in the import file?
-                nsLookupResultList.set(i,nsLookupPool.submit(new NSLookupThread(getNextDomain()))); // replace finished thread with a new one
+                nsLookupResultList.set(i,nsLookupPool.submit(new NSLookupThread(getNextDomain(),timeout))); // replace finished thread with a new one
                 requestCounter++;
               }
               else { // there are no other domains in the file
@@ -141,7 +140,7 @@ public class IPResolver {
       Files.delete(Paths.get(workingDir+WORKING+domainFileName));
       BigDecimal totalTime=BigDecimal.valueOf((new Date().getTime()-startTime)/1000d).setScale(2, BigDecimal.ROUND_HALF_EVEN);
       BigDecimal perSecond=BigDecimal.valueOf(requestCounter).divide(totalTime, 2, BigDecimal.ROUND_HALF_EVEN);
-      LOG.warn("Requests: "+requestCounter+" errors:"+errorCounter+" Total time:"+totalTime+" per sec: "+perSecond+" "+domainFileName);
+      LOG.warn("Requests:"+requestCounter+" errors:"+errorCounter+" Total time:"+totalTime+" per sec:"+perSecond+" Threads:"+poolSize+" Timeout:"+timeout+" "+domainFileName);
     }
   }
   private Domain getNextDomain() throws IOException {
@@ -187,11 +186,5 @@ public class IPResolver {
       FileHelper.cutDomainFile(workingDir, fileName, workingDir+WORKING, domainsInFile, topLevel, CUT_FILE_EXT);
       Files.move(Paths.get(workingDir+fileName), Paths.get(workingDir+BACKUP+fileName), StandardCopyOption.REPLACE_EXISTING);
     }
-  }
-  private String getNextFile() throws IOException {
-    List<String> files = FileHelper.getFiles(workingDir+WORKING, CUT_FILE_EXT);
-    Collections.sort(files);
-    if (files==null||files.size()<1) return null;
-    return files.get(0);
   }
 }

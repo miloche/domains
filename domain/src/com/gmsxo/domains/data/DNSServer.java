@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.ForeignKey;
@@ -44,7 +45,7 @@ public class DNSServer implements Serializable {
   
   @ManyToMany (mappedBy="dnsServer")
   private List<Domain> domain=new LinkedList<>();
-
+  
   public DNSServer() {}
   
   public DNSServer(String domainName) {
@@ -99,7 +100,7 @@ public class DNSServer implements Serializable {
   public String toString() {
     return new StringBuilder("DNSServer [id=").append(id)
         .append(", domainName=").append(domainName)
-        .append(", ipAddress=").append(ipAddress).append("]")
+        .append(", ipAddress=").append(ipAddress).append(", hashCode=").append(hashCode()).append("]")
         .toString();
   }
 }

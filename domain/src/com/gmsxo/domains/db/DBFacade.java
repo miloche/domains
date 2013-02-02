@@ -46,6 +46,25 @@ public final class DBFacade {
     }
   }
   
+  public static final String DB_INSERT_IP_TEMPLATE="with insert_ip_check as ("+
+      "insert into IP_ADDRESS (\"ip_address\") "+
+      "select '%s' "+
+      "where not exists (select id from IP_ADDRESS where IP_ADDRESS='%s') "+
+      "returning ip_address.id, ip_address.ip_address"+
+    ") "+
+    "select id,ip_address from insert_ip_check "+ 
+    "union select id,ip_address from ip_address where ip_address='%s'";
+  
+  public static final String DB_INSERT_DNS_TEMPLATE="with insert_dns_check as ("+
+      "insert into DNS_SERVER (\"domain_name\") "+
+      "select '%s' "+
+      "where not exists (select id from DNS_SERVER where DOMAIN_NAME='%s') "+
+      "returning dns_server.id, dns_server.domain_name, dns_server.ip_address_id"+
+    ") "+
+    "select id,domain_name,null as ip_address, ip_address_id from insert_dns_check "+ 
+    "union select id,domain_name,null as ip_address, ip_address_id from dns_server where domain_name='%s'";
+
+  
   public static IPAddress saveOrUpdate(IPAddress ipAddress) {
     //LOG.info("saveOrUpdate: " + ipAddress);
     Session session = DBUtil.openSession();
