@@ -72,8 +72,16 @@ public class InsertDomains { public InsertDomains() {}
             ipAddresses.add(ipAddress);
           }
           
-          for (int i=2;i<splitLine.length;i++) {
+          nextdomain: for (int i=2;i<splitLine.length;i++) {
             String dnsServerDomainName=splitLine[i];
+            
+            // this line can be removed later, it was added because of a bug in IPResolver which caused duplicate dns in one output line. it's fixed now
+            
+            
+            for (DNSServer dns:domain.getDnsServer()) {
+              if (dns.getDomainName().equals(dnsServerDomainName)) continue nextdomain;
+            }
+
             DNSServer dnsServer=null;
             for (DNSServer dnsFromList:dnsServers) if (dnsServerDomainName.equals(dnsFromList.getDomainName())) {
               dnsServer=dnsFromList;
@@ -115,7 +123,7 @@ public class InsertDomains { public InsertDomains() {}
         LOG.error("IO "+workingDir+CFG_EXPORT_SUB_DIR+fileName);
       }
       
-      break;
+      //break;
     }
   }
   private List<Thread> startDomainThreads(List<Domain> records, int parts) {
@@ -228,10 +236,15 @@ class InsertDomainsThread implements Runnable {
         }
         domainSession.getTransaction().commit();
         domainSession.clear();
-        domainSession.close();
         errorCounter=0;
       }
-      catch (Exception e) { LOG.error("insert "+err,e); errorCounter++; domainSession.getTransaction().rollback(); }
+      catch (Exception e) { 
+        LOG.error("insert "+err,e); errorCounter++; domainSession.getTransaction().rollback();
+        
+        for (Domain d:domains) LOG.error(d);
+        
+        continue;
+      }
       finally { domainSession.close(); }
       break;
     }

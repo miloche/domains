@@ -27,7 +27,7 @@ public class DBUtil {
       .setProperty("hibernate.connection.password", "passwd")
       .setProperty("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider")
       
-      .setProperty("hibernate.hbm2ddl.auto", "create")
+      .setProperty("hibernate.hbm2ddl.auto", "update")
       .setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL82Dialect")
       
       .setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy")

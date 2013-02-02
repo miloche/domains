@@ -10,6 +10,7 @@ import javax.naming.NamingException;
 import org.apache.log4j.Logger;
 
 import com.gmsxo.domains.data.DNSServer;
+import com.gmsxo.domains.data.Domain;
 import com.gmsxo.domains.data.IPAddress;
 
 import java.net.InetAddress;
@@ -20,12 +21,38 @@ import java.util.List;
 
 public final class DNSLookup { private DNSLookup() {}
 private static Logger LOG = Logger.getLogger(DNSLookup.class);
+
+private static void parseAttributes(Domain domain, Attributes attrs) throws NamingException {
+  LOG.debug("4 "+domain);
+  if (attrs!=null) {
+    Attribute attrNS = attrs.get("NS");
+    if (attrNS!=null) {
+      NamingEnumeration<?> allNS = attrNS.getAll();
+      if (allNS!=null) next: while(allNS.hasMoreElements()) {
+        String dnsRaw=allNS.next().toString();
+        String dnsDomainName = DNSLookup.removeDot(dnsRaw.toLowerCase()).trim();
+        for (DNSServer dns:domain.getDnsServer()) {
+          if (dns.getDomainName().equals(dnsDomainName)) {
+            continue next;
+          }
+        }
+        domain.addDnsServer(new DNSServer(dnsDomainName));
+      }
+    }
+
+    Attribute attrA = attrs.get("A");
+    if (attrA!=null) domain.setIPAddress(new IPAddress((String)attrA.get()));
+  }
+  if (domain.getIpAddress()==null||domain.getIpAddress().getIpAddress()==null) domain.setIPAddress(new IPAddress("NULL_IP"));
+}
+
 public static void main(String args[]) throws NamingException {
   List<DNSServer> dns = new LinkedList<DNSServer>();
-  dns.add(new DNSServer("ns.dnssek.org"));
-  //dns.add(new DNSServer("ns2.mdnsservice.com"));
-  //dns.add(new DNSServer("ns3.mdnsservice.com"));
-  Attributes attrs = nsLookUp("dnsseccert.us", dns, 1000);
+  dns.add(new DNSServer("ns1.hoangthanh.net"));
+  dns.add(new DNSServer("ns2.hoangthanh.net"));
+  Domain domain=new Domain("doanhnhantrebinhdinh.com");
+  domain.setDnsServer(dns);
+  Attributes attrs = nsLookUp(domain.getDomainName(), domain.getDnsServer().get(0).getDomainName(), 1000);
   
   if (attrs!=null) {
     Attribute attrNS = attrs.get("NS");
@@ -35,10 +62,11 @@ public static void main(String args[]) throws NamingException {
     }
 
     Attribute attrA = attrs.get("A");
-    if (attrA!=null) LOG.info(new IPAddress((String)attrA.get()));
+    if (attrA!=null) LOG.info(new IPAddress(((String)attrA.get()).trim()));
   }
-  //if (domain.getIpAddress()==null) domain.setIPAddress(DBFacade.getNullIP());
-  //if (domain.getIpAddress()==null||domain.getIpAddress().getIpAddress()==null) domain.setIPAddress(new IPAddress("NULL"));
+  
+  parseAttributes(domain, attrs);
+  LOG.debug(domain);
 }
   //private static final Logger LOG=Logger.getLogger(DNSLookup.class);
   //private static final String GOOGLE_DNS="dns://google-public-dns-a.google.com dns://google-public-dns-b.google.com";

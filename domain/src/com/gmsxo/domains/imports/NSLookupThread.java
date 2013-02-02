@@ -30,14 +30,18 @@ public class NSLookupThread implements Callable<NSLookupThread.Result> {
       if (attrNS!=null) {
         NamingEnumeration<?> allNS = attrNS.getAll();
         if (allNS!=null) next: while(allNS.hasMoreElements()) {
-          String dnsDomainName = DNSLookup.removeDot(allNS.next().toString().toLowerCase());
+          String dnsDomainName = DNSLookup.removeDot(allNS.next().toString().toLowerCase()).trim();
           for (DNSServer dns:domain.getDnsServer()) if (dns.getDomainName().equals(dnsDomainName)) continue next;
           domain.addDnsServer(new DNSServer(dnsDomainName));
         }
       }
   
       Attribute attrA = attrs.get("A");
-      if (attrA!=null) domain.setIPAddress(new IPAddress((String)attrA.get()));
+      if (attrA!=null) {
+        String ip=(String)attrA.get();
+        if (ip!=null) domain.setIPAddress(new IPAddress(ip.trim()));
+        else domain.setIPAddress(new IPAddress(ip));
+      }
     }
     if (domain.getIpAddress()==null||domain.getIpAddress().getIpAddress()==null) domain.setIPAddress(new IPAddress("NULL_IP"));
   }
