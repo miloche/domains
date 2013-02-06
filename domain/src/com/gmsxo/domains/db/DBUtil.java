@@ -22,7 +22,6 @@ public class DBUtil {
       .setProperty("hibernate.connection.driver_class", "org.postgresql.Driver")
       .setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/domains")
       //.setProperty("hibernate.connection.url", "jdbc:postgresql://192.168.1.102:5432/domains")
-      //.setProperty("hibernate.connection.url", "jdbc:postgresql://li583-99.members.linode.com/domains")
       .setProperty("hibernate.connection.username", "domains")
       .setProperty("hibernate.connection.password", "passwd")
       .setProperty("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider")
@@ -33,7 +32,7 @@ public class DBUtil {
       .setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy")
       .setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy")
       
-      .setProperty("hibernate.jdbc.batch_size", "100")
+      .setProperty("hibernate.jdbc.batch_size", "30")
 
       .setProperty("hibernate.cache.provider_class", "org.hibernate.cache.EhCacheProvider")
       .setProperty("hibernate.cache.use_second_level_cache", "false")
@@ -45,9 +44,9 @@ public class DBUtil {
       .setProperty("hibernate.id.new_generator_mappings", "true")
       
       .setProperty("hibernate.c3p0.min_size", "5")
-      .setProperty("hibernate.c3p0.max_size", "300")
+      .setProperty("hibernate.c3p0.max_size", "150")
       .setProperty("hibernate.c3p0.timeout", "300")
-      .setProperty("hibernate.c3p0.max_statements", "150")
+      .setProperty("hibernate.c3p0.max_statements", "100")
       .setProperty("hibernate.c3p0.idle_test_period", "3000")
       .setProperty("hibernate.debugUnreturnedConnectionStackTraces", "true")
       .setProperty("hibernate.c3p0.unreturnedConnectionTimeout", "1000")
