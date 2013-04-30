@@ -9,15 +9,16 @@ import javax.naming.NamingException;
 
 import org.apache.log4j.Logger;
 
-import com.gmsxo.domains.data.DNSServer;
+import com.gmsxo.domains.data.DnsServer;
 import com.gmsxo.domains.data.Domain;
-import com.gmsxo.domains.data.IPAddress;
+import com.gmsxo.domains.data.IpAddress;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Hashtable;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public final class DNSLookup { private DNSLookup() {}
 private static Logger LOG = Logger.getLogger(DNSLookup.class);
@@ -31,38 +32,40 @@ private static void parseAttributes(Domain domain, Attributes attrs) throws Nami
       if (allNS!=null) next: while(allNS.hasMoreElements()) {
         String dnsRaw=allNS.next().toString();
         String dnsDomainName = DNSLookup.removeDot(dnsRaw.toLowerCase()).trim();
-        for (DNSServer dns:domain.getDnsServer()) {
-          if (dns.getDomainName().equals(dnsDomainName)) {
+        for (DnsServer dns:domain.getDnsServer()) {
+          if (dns.getName().equals(dnsDomainName)) {
             continue next;
           }
         }
-        domain.addDnsServer(new DNSServer(dnsDomainName));
+        domain.addDnsServer(new DnsServer(dnsDomainName));
       }
     }
 
     Attribute attrA = attrs.get("A");
-    if (attrA!=null) domain.setIPAddress(new IPAddress((String)attrA.get()));
+    if (attrA!=null) domain.setIpAddress(new IpAddress((String)attrA.get()));
   }
-  if (domain.getIpAddress()==null||domain.getIpAddress().getIpAddress()==null) domain.setIPAddress(new IPAddress("NULL_IP"));
+  if (domain.getIpAddress()==null||domain.getIpAddress().getAddress()==null) domain.setIpAddress(new IpAddress("NULL_IP"));
 }
 
 public static void main(String args[]) throws NamingException {
-  List<DNSServer> dns = new LinkedList<DNSServer>();
-  dns.add(new DNSServer("ns1.hoangthanh.net"));
-  dns.add(new DNSServer("ns2.hoangthanh.net"));
-  Domain domain=new Domain("doanhnhantrebinhdinh.com");
-  domain.setDnsServer(dns);
-  Attributes attrs = nsLookUp(domain.getDomainName(), domain.getDnsServer().get(0).getDomainName(), 1000);
   
+  Set<DnsServer> dns = new TreeSet<DnsServer>();
+  dns.add(new DnsServer("ns1.anything.com"));
+  //dns.add(new DNSServer("ns1.dnsbackup.net"));
+  Domain domain=new Domain("afrodisiac.com");
+  domain.setDnsServer(dns);
+  Attributes attrs = nsLookUp(domain.getName(), domain.getDnsServer(), 1000);
+      //reverseNsLookup("64.99.80.30", "google-public-dns-a.google.com", 2000);
+      //  reverseNsLookup("205.178.189.131", "10.10.10.1", 2000);
   if (attrs!=null) {
     Attribute attrNS = attrs.get("NS");
     if (attrNS!=null) {
       NamingEnumeration<?> allNS = attrNS.getAll();
-      if (allNS!=null) while(allNS.hasMoreElements()) LOG.info(new DNSServer(DNSLookup.removeDot(allNS.next().toString())));
+      if (allNS!=null) while(allNS.hasMoreElements()) LOG.info(new DnsServer(DNSLookup.removeDot(allNS.next().toString())));
     }
 
     Attribute attrA = attrs.get("A");
-    if (attrA!=null) LOG.info(new IPAddress(((String)attrA.get()).trim()));
+    if (attrA!=null) LOG.info(new IpAddress(((String)attrA.get()).trim()));
   }
   
   parseAttributes(domain, attrs);
@@ -99,20 +102,52 @@ public static void main(String args[]) throws NamingException {
   }
   
   public static Attributes nsLookUp(String domainName, String dns, int timeout) throws NamingException {
-    DNSServer dnsServer = new DNSServer(dns);
-    List<DNSServer> dnsServers = new LinkedList<>();
+    DnsServer dnsServer = new DnsServer(dns);
+    Set<DnsServer> dnsServers = new TreeSet<>();
     dnsServers.add(dnsServer);
     return nsLookUp(domainName, dnsServers, timeout);
   }
 
-  public static Attributes nsLookUp(String domainName, List<DNSServer> dns, int timeout) throws NamingException {
+  public static Attributes nsLookUp(String domainName, Set<DnsServer> dns, int timeout) throws NamingException {
     //LOG.info("nsLookUp: " + domainName + " dns: " + dns);
     Hashtable<String, Object> env = new Hashtable<String, Object>();
     env.put("java.naming.factory.initial", "com.gmsxo.domains.dns.dnsclient.DnsContextFactory");
     //env.put("java.naming.factory.initial", "com.sun.jndi.ldap.LdapCtxFactory");
     
     StringBuilder dnsServers = new StringBuilder("");        
-    for( DNSServer dnsServer : dns ) dnsServers.append("dns://").append(dnsServer.getDomainName()).append(" ");
+    for( DnsServer dnsServer : dns ) {
+      dnsServers.append("dns://").append(dnsServer.getName()).append(" ");
+      break;
+    }
+    //LOG.debug(dnsServers.toString());
+    env.put("java.naming.provider.url", dnsServers.toString());
+    //env.put("java.naming.provider.url", GOOGLE_DNS);
+    
+    //env.put("com.sun.jndi.dns.recursion", "true");
+    env.put("com.sun.jndi.dns.timeout.initial", ""+timeout);
+    env.put("com.sun.jndi.dns.timeout.retries", "1");
+    LOG.debug("5 "+domainName);
+    DirContext ictx = new InitialDirContext(env);
+    try {
+      LOG.debug("6 "+domainName);
+      //return ictx.getAttributes(domainName, new String[]{"A", "AAAA", "NS", "CNAME", "SOA", "PTR", "MX", "TXT", "HINFO", "NAPTR", "SRV"});
+  
+      return ictx.getAttributes(domainName, new String[]{"A", "NS"});
+    }
+    finally {
+      ictx.close();
+    }
+  }
+
+  
+  public static Attributes nsLookUp(String domainName, List<DnsServer> dns, int timeout) throws NamingException {
+    //LOG.info("nsLookUp: " + domainName + " dns: " + dns);
+    Hashtable<String, Object> env = new Hashtable<String, Object>();
+    env.put("java.naming.factory.initial", "com.gmsxo.domains.dns.dnsclient.DnsContextFactory");
+    //env.put("java.naming.factory.initial", "com.sun.jndi.ldap.LdapCtxFactory");
+    
+    StringBuilder dnsServers = new StringBuilder("");        
+    for( DnsServer dnsServer : dns ) dnsServers.append("dns://").append(dnsServer.getName()).append(" ");
     //LOG.debug(dnsServers.toString());
     env.put("java.naming.provider.url", dnsServers.toString());
     //env.put("java.naming.provider.url", GOOGLE_DNS);

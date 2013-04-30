@@ -13,21 +13,25 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate/required/jboss-logging-3.1.0.GA.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate/required/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/c3p0/mchange-commons-java-0.2.3.3.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ehcache/ehcache-core-2.6.3.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ehcache/ehcache-terracotta-2.6.3.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ehcache/terracotta-toolkit-1.6-runtime-5.3.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ehcache/hibernate-ehcache-4.1.9.Final.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ehcache/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/c3p0/hibernate-c3p0-4.1.9.Final.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-api-1.7.2.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/postgresql-9.2-1002.jdbc4.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/c3p0/c3p0-0.9.2-pre8.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/T7.0.35J1.7">
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ehcache/ehcache-2.7.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient/fluent-hc-4.2.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient/httpclient-cache-4.2.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient/httpmime-4.2.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/T7.0.39J.1.7.17">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_09">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_17">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>

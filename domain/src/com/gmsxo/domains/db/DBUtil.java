@@ -1,52 +1,51 @@
 package com.gmsxo.domains.db;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.ImprovedNamingStrategy;
 import org.hibernate.service.ServiceRegistryBuilder;
 
-import com.gmsxo.domains.data.DNSServer;
+import com.gmsxo.domains.data.DnsServer;
 import com.gmsxo.domains.data.Domain;
-import com.gmsxo.domains.data.IPAddress;
+import com.gmsxo.domains.data.IpAddress;
  
 public class DBUtil {
  private static final SessionFactory sessionFactory;
  
+ private static final String DBADDR="jdbc:postgresql://localhost:5432/domains";
+ //private static final String DBADDR="jdbc:postgresql://192.168.1.102:5432/domains";
 
  static {
+  System.out.println("DBADDR:"+DBADDR);
   try {
     Configuration configuration = new Configuration()
       .setProperty("hibernate.connection.driver_class", "org.postgresql.Driver")
-      .setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/domains")
-      //.setProperty("hibernate.connection.url", "jdbc:postgresql://192.168.1.102:5432/domains")
+      .setProperty("hibernate.connection.url", DBADDR)
       .setProperty("hibernate.connection.username", "domains")
-      .setProperty("hibernate.connection.password", "passwd")
+      .setProperty("hibernate.connection.password", "*****")
       .setProperty("hibernate.connection.provider_class", "org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider")
       
-      .setProperty("hibernate.hbm2ddl.auto", "update")
+      .setProperty("hibernate.hbm2ddl.auto", "validate")
       .setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL82Dialect")
       
       .setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy")
-      .setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy")
       
-      .setProperty("hibernate.jdbc.batch_size", "30")
+      .setProperty("hibernate.jdbc.batch_size", "100")
 
       .setProperty("hibernate.cache.provider_class", "org.hibernate.cache.EhCacheProvider")
-      .setProperty("hibernate.cache.use_second_level_cache", "false")
+      .setProperty("hibernate.cache.use_second_level_cache", "true")
       .setProperty("hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory")
-      .setProperty("hibernate.cache.use_query_cache", "false")
+      .setProperty("hibernate.cache.use_query_cache", "true")
       .setProperty("net.sf.ehcache.configurationResourceName", "/com/gmsxo/domains/db/ehcache.xml")
       
       .setProperty("hibernate.show_sql", "false")
       .setProperty("hibernate.id.new_generator_mappings", "true")
       
       .setProperty("hibernate.c3p0.min_size", "5")
-      .setProperty("hibernate.c3p0.max_size", "150")
+      .setProperty("hibernate.c3p0.max_size", "50")
       .setProperty("hibernate.c3p0.timeout", "300")
-      .setProperty("hibernate.c3p0.max_statements", "100")
+      .setProperty("hibernate.c3p0.max_statements", "200")
       .setProperty("hibernate.c3p0.idle_test_period", "3000")
       .setProperty("hibernate.debugUnreturnedConnectionStackTraces", "true")
       .setProperty("hibernate.c3p0.unreturnedConnectionTimeout", "1000")
@@ -56,10 +55,9 @@ public class DBUtil {
       
       .setNamingStrategy(ImprovedNamingStrategy.INSTANCE)
       .addPackage("com.gmsxo.domains.data")
-      .addAnnotatedClass(DNSServer.class)
-      .addAnnotatedClass(IPAddress.class)
-      .addAnnotatedClass(Domain.class);
-      //.addAnnotatedClass(StoredProcedureResult.class);
+      .addAnnotatedClass(Domain.class)
+      .addAnnotatedClass(IpAddress.class)
+      .addAnnotatedClass(DnsServer.class);
     sessionFactory = configuration
       .buildSessionFactory(new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry());
     
@@ -75,11 +73,11 @@ public class DBUtil {
         session.createSQLQuery("ALTER TABLE ip_address ALTER COLUMN id SET DEFAULT nextval('ip_address_id_seq')").executeUpdate();
         
         
-        for (int id=1;id<=IPAddress.errors.length;id++) {
-          session.createSQLQuery("insert into ip_address (id,ip_address) values ("+id+",'"+IPAddress.errors[id-1]+"')").executeUpdate();
-          if (id>1) DBFacade.errors.add((IPAddress)session.get(IPAddress.class, (long)id));
+        for (int id=1;id<=IpAddress.errors.length;id++) {
+          session.createSQLQuery("insert into ip_address (id,ip_address) values ("+id+",'"+IpAddress.errors[id-1]+"')").executeUpdate();
+          if (id>1) DBFacade.errors.add((IpAddress)session.get(IpAddress.class, (long)id));
         }
-        DBFacade.setNullIP((IPAddress)session.get(IPAddress.class, 1l));
+        DBFacade.setNullIP((IpAddress)session.get(IpAddress.class, 1l));
         System.out.println(DBFacade.errors.get(0));
         System.out.println(DBFacade.getNullIP());
         session.getTransaction().commit();
@@ -92,7 +90,7 @@ public class DBUtil {
         System.exit(100);
       }
     } else {
-      try {
+      /*try {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         @SuppressWarnings("unchecked")
@@ -107,7 +105,7 @@ public class DBUtil {
         System.out.println("ERR");
         e.printStackTrace();
         System.exit(100);
-      }
+      }*/
     }
     System.out.println("DB INIT FINISHED");
   }

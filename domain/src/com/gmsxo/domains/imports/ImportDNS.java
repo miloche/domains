@@ -19,11 +19,10 @@ import javax.naming.NamingException;
 
 import org.apache.log4j.Logger;
 
-import com.gmsxo.domains.data.DNSServer;
+import com.gmsxo.domains.data.DnsServer;
 import com.gmsxo.domains.data.Domain;
-import com.gmsxo.domains.db.DBFacade;
-import com.gmsxo.domains.db.DBUtil;
 import com.gmsxo.domains.dns.DNSLookup;
+import com.gmsxo.domains.resolve.NSLookupThread;
 
 public class ImportDNS {
 
@@ -64,18 +63,18 @@ public class ImportDNS {
       // dns part
       
       String dnsDomainName=DNSLookup.formatDNS(split[2],topLevel);
-      DNSServer dnsServer = new DNSServer();
-      dnsServer.setDomainName(dnsDomainName);
+      DnsServer dnsServer = new DnsServer();
+      dnsServer.setName(dnsDomainName);
       
-      if (domainName.equals(lastDomain.getDomainName())) { // it is the same domain, add dns server and continue
+      if (domainName.equals(lastDomain.getName())) { // it is the same domain, add dns server and continue
         //lastDomain.getDnsServer().add(dnsServer);
         continue;
       } else { // it is the next domain, create new domain, update return domain and upadte the last domain with the new one
         Domain domain=new Domain();
-        domain.setDomainName(domainName);
+        domain.setName(domainName);
         //domain.getDnsServer().add(dnsServer);
         
-        if (lastDomain.getDomainName()==null) { // the first line
+        if (lastDomain.getName()==null) { // the first line
           lastDomain=domain;
           continue;
         }

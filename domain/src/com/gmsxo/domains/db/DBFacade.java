@@ -2,28 +2,30 @@ package com.gmsxo.domains.db;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.exception.ConstraintViolationException;
 
-import com.gmsxo.domains.data.DNSServer;
+import com.gmsxo.domains.data.DnsServer;
 import com.gmsxo.domains.data.Domain;
-import com.gmsxo.domains.data.IPAddress;
+import com.gmsxo.domains.data.IpAddress;
 
 public final class DBFacade {
   private static final Logger LOG = Logger.getLogger(DBFacade.class);
   public static volatile boolean initialized=false;
-  private static IPAddress NULLIP;
-  static List<IPAddress> errors=new LinkedList<>();
+  private static IpAddress NULLIP;
+  static List<IpAddress> errors=new LinkedList<>();
   
-  public static List<IPAddress> getErrors() {return errors;}
-  static void setNullIP(IPAddress nullIP) {
+  public static List<IpAddress> getErrors() {return errors;}
+  static void setNullIP(IpAddress nullIP) {
     NULLIP=nullIP;
   }
   
-  public static IPAddress getNullIP() {
+  public static IpAddress getNullIP() {
     return NULLIP;
   }
   
@@ -65,7 +67,7 @@ public final class DBFacade {
     "union select id,domain_name,null as ip_address, ip_address_id from dns_server where domain_name='%s'";
 
   
-  public static IPAddress saveOrUpdate(IPAddress ipAddress) {
+  public static IpAddress saveOrUpdate(IpAddress ipAddress) {
     //LOG.info("saveOrUpdate: " + ipAddress);
     Session session = DBUtil.openSession();
     try {
@@ -84,8 +86,8 @@ public final class DBFacade {
       Session session1 = DBUtil.openSession();
       try {
         Query query = session1.createQuery("from IPAddress where ipAddress = :key");
-        query.setString("key", ipAddress.getIpAddress());
-        return (IPAddress)query.uniqueResult();
+        query.setString("key", ipAddress.getAddress());
+        return (IpAddress)query.uniqueResult();
       }
       finally {
         session1.close();
@@ -99,7 +101,7 @@ public final class DBFacade {
     
   }
   
-  public static DNSServer saveOrUpdate(DNSServer dnsServer) {
+  public static DnsServer saveOrUpdate(DnsServer dnsServer) {
     //LOG.info("saveOrUpdate: " + dnsServer);
     Session session = DBUtil.openSession();
     try {
@@ -118,8 +120,8 @@ public final class DBFacade {
       Session session1 = DBUtil.openSession();
       try {
         Query query = session1.createQuery("from DNSServer where domainName = :key");
-        query.setString("key", dnsServer.getDomainName());
-        return (DNSServer)query.uniqueResult();
+        query.setString("key", dnsServer.getName());
+        return (DnsServer)query.uniqueResult();
       }
       finally {
         session1.close();
@@ -133,19 +135,20 @@ public final class DBFacade {
     
   }
   
-  public static List<DNSServer> saveOrUpadteDNSServer(List<DNSServer> dnsServers) {
-    for (int index=0;index<dnsServers.size();index++) {
-      dnsServers.set(index, saveOrUpdate(dnsServers.get(index)));
+  public static Domain saveOrUpadteDNSServer(Domain domain) {
+    Set<DnsServer> updated = new TreeSet<>();
+    
+    for (DnsServer dns:domain.getDnsServer()) {
+      updated.add(saveOrUpdate(dns));
     }
-    return dnsServers;
+    domain.setDnsServer(updated);
+    return domain;
   }
-   
-
   
   public static Domain saveOrUpdateDomain(Domain domain) {
     //LOG.info("saveOrUpdateDomain "+domain);
-    saveOrUpadteDNSServer(domain.getDnsServer());
-    if (domain.getIpAddress().getId()==null) domain.setIPAddress(saveOrUpdate(domain.getIpAddress()));
+    saveOrUpadteDNSServer(domain);
+    if (domain.getIpAddress().getId()==null) domain.setIpAddress(saveOrUpdate(domain.getIpAddress()));
     Session session = DBUtil.openSession();
     try {
       session.beginTransaction();
@@ -160,21 +163,19 @@ public final class DBFacade {
       Session session1 = DBUtil.openSession();
       try {
         Query query = session1.createQuery("from Domain where domainName = :key");
-        query.setString("key", domain.getDomainName());
+        query.setString("key", domain.getName());
         Domain savedDomain = (Domain)query.uniqueResult();
-        savedDomain.setIPAddress(domain.getIpAddress());
+        savedDomain.setIpAddress(domain.getIpAddress());
         savedDomain.setDnsServer(domain.getDnsServer());
         session1.save(savedDomain);
         return savedDomain;
       }
       finally {
-        //session1.flush();
         session1.close();
       }
     }
     finally {
       if (session!=null) {
-        //session.flush();
         session.close();
       }
       LOG.info("saveOrUpdate: saved: " + domain);

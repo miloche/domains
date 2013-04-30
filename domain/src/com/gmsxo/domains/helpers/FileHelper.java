@@ -1,5 +1,9 @@
 package com.gmsxo.domains.helpers;
 
+import static com.gmsxo.domains.config.AppConfig.CFG_BACKUP_SUB_DIR;
+import static com.gmsxo.domains.config.AppConfig.CFG_EXPORT_SUB_DIR;
+import static com.gmsxo.domains.config.AppConfig.CFG_WORKING_SUB_DIR;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -26,7 +30,18 @@ import com.gmsxo.domains.dns.DNSLookup;
 public final class FileHelper {
   @SuppressWarnings("unused") private static final Logger LOG = Logger.getLogger(FileHelper.class); 
   private FileHelper() {}
-  
+
+  public static List<String> getFilesFull(String dirName, String extension) throws IOException {
+    List<String> paths=new LinkedList<>();
+    try (DirectoryStream<Path> ds=Files.newDirectoryStream(FileSystems.getDefault().getPath(dirName))) {
+      for (Path path : ds) {
+        File file = path.toFile();
+        if(file.isFile()&&(extension==null||extension.length()==0||file.getName().endsWith(extension))) paths.add(dirName+file.getName());
+      }
+    } 
+    return paths;
+  }
+
   public static List<String> getFiles(String dirName, String extension) throws IOException {
     List<String> paths=new LinkedList<>();
     try (DirectoryStream<Path> ds=Files.newDirectoryStream(FileSystems.getDefault().getPath(dirName))) {
@@ -78,18 +93,13 @@ public final class FileHelper {
     String importFilePath=sourceDirName+sourceFileName;
     int    appendix=0;
     String lastDomain="";
-    //long   lineCounter=0;
     long   domainCounter=0l;
-
     try (BufferedReader reader=Files.newBufferedReader(Paths.get(importFilePath),StandardCharsets.UTF_8)) {
-      //long   sourceLinesCount=FileHelper.count(importFilePath);
-
       BufferedWriter writer = null;
       while (true) {
         String line = reader.readLine();
         if (line==null) break;
-        if (!line.matches(DNSHelper.DOMAIN_REGEXP)) continue;
-        //lineCounter++;
+        if (!line.matches(DNSHelper.DOMAIN_IN_IMPORT_REGEX)) continue;
         String domainName=DNSLookup.formatDomain(line.split(" ",-1)[0],topLevel); // wouldn't work for other import files
         if (!lastDomain.equals(domainName)) {
           domainCounter++;
@@ -105,7 +115,6 @@ public final class FileHelper {
             Files.deleteIfExists(newFile);
             newFile = Files.createFile(newFile);
             writer = Files.newBufferedWriter(newFile, StandardCharsets.UTF_8);
-            //LOG.info(lineCounter+"/"+sourceLinesCount+" "+targetFileName);
           }
         }
         writer.append(line);
@@ -183,5 +192,21 @@ public final class FileHelper {
           e.printStackTrace();
         }
     }
+  }
+  
+  public static void checkDirs(String workingDir) throws IOException {
+    Files.createDirectories(Paths.get(workingDir+CFG_BACKUP_SUB_DIR));
+    Files.createDirectories(Paths.get(workingDir+CFG_EXPORT_SUB_DIR));
+    Files.createDirectories(Paths.get(workingDir+CFG_WORKING_SUB_DIR));
+    for (String letter:ImportHelper.pref) {
+      Files.createDirectories(Paths.get(workingDir+CFG_WORKING_SUB_DIR+letter));
+    }
+    for (String letter:ImportHelper.pref) {
+      Files.createDirectories(Paths.get(workingDir+CFG_EXPORT_SUB_DIR+letter));
+    }
+    for (String letter:ImportHelper.pref) {
+      Files.createDirectories(Paths.get(workingDir+CFG_BACKUP_SUB_DIR+letter));
+    }
+    
   }
 }
