@@ -1,0 +1,1721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="0" timestamp="1385754490350" analysisTimestamp="1385754733855" release="">
+  <Project>
+    <Jar>C:\Users\miloxe\Documents\GitHub\domains\domain\build\classes</Jar>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\antlr-2.7.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\c3p0-0.9.2-pre8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\cglib-2.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\common-annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\commons-beanutils.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\commons-codec-1.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\commons-collections-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\commons-digester.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\commons-logging-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\dnsjava-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\dom4j-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\ehcache-2.7.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\fluent-hc-4.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\hibernate-c3p0-4.2.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\hibernate-commons-annotations-4.0.1.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\hibernate-core-4.2.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\hibernate-ehcache-4.2.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\hibernate-entitymanager-4.2.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\hibernate-jpa-2.0-api-1.0.1.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\httpclient-4.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\httpclient-cache-4.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\httpcore-4.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\httpmime-4.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\javassist-3.17.1-GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\jboss-logging-3.1.0.GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\jboss-transaction-api_1.1_spec-1.0.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\jsf-api-2.1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\jsf-impl-2.1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\jstl.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\jta-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\mchange-commons-java-0.2.3.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\postgresql-9.2-1002.jdbc4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\primefaces-3.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\slf4j-api-1.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\slf4j-log4j12-1.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\Documents\GitHub\domains\domain\WebContent\WEB-INF\lib\standard.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\AppData\Local\Temp\findbugs214502647666375274.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\miloxe\AppData\Local\Temp\findbugs3637286873644478765.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\miloxe\Documents\GitHub\domains\domain\src</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" instanceHash="9082d430b0ec6efb6cbae4e3ae5c2440" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to pattern in com.gmsxo.domains.RegexpTest.checkRegex()</LongMessage>
+    <Class classname="com.gmsxo.domains.RegexpTest" primary="true">
+      <SourceLine classname="com.gmsxo.domains.RegexpTest" start="15" end="58" sourcefile="RegexpTest.java" sourcepath="com/gmsxo/domains/RegexpTest.java" relSourcepath="com\gmsxo\domains\RegexpTest.java">
+        <Message>At RegexpTest.java:[lines 15-58]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.RegexpTest</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.RegexpTest" name="checkRegex" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.RegexpTest" start="51" end="58" startBytecode="0" endBytecode="12" sourcefile="RegexpTest.java" sourcepath="com/gmsxo/domains/RegexpTest.java" relSourcepath="com\gmsxo\domains\RegexpTest.java"/>
+      <Message>In method com.gmsxo.domains.RegexpTest.checkRegex()</Message>
+    </Method>
+    <LocalVariable name="pattern" register="1" pc="9" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named pattern</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.RegexpTest" primary="true" start="55" end="55" startBytecode="8" endBytecode="8" sourcefile="RegexpTest.java" sourcepath="com/gmsxo/domains/RegexpTest.java" relSourcepath="com\gmsxo\domains\RegexpTest.java">
+      <Message>At RegexpTest.java:[line 55]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="pattern"/>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_ARRAY" priority="1" abbrev="MS" category="MALICIOUS_CODE" instanceHash="f42dd98e06bf8289b8b1919a69db2322" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Field is a mutable array</ShortMessage>
+    <LongMessage>com.gmsxo.domains.config.AppConfig.CFG_TOPLEVELS is a mutable array</LongMessage>
+    <Class classname="com.gmsxo.domains.config.AppConfig" primary="true">
+      <SourceLine classname="com.gmsxo.domains.config.AppConfig" start="7" end="26" sourcefile="AppConfig.java" sourcepath="com/gmsxo/domains/config/AppConfig.java" relSourcepath="com\gmsxo\domains\config\AppConfig.java">
+        <Message>At AppConfig.java:[lines 7-26]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.config.AppConfig</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.config.AppConfig" name="CFG_TOPLEVELS" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.config.AppConfig" sourcefile="AppConfig.java" sourcepath="com/gmsxo/domains/config/AppConfig.java" relSourcepath="com\gmsxo\domains\config\AppConfig.java">
+        <Message>In AppConfig.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.config.AppConfig.CFG_TOPLEVELS</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.config.AppConfig" primary="true" start="26" end="26" startBytecode="119" endBytecode="119" sourcefile="AppConfig.java" sourcepath="com/gmsxo/domains/config/AppConfig.java" relSourcepath="com\gmsxo\domains\config\AppConfig.java">
+      <Message>At AppConfig.java:[line 26]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS" instanceHash="6b332fc4b673a0af7f35a9b65895dea6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="11">
+    <ShortMessage>Nullcheck of value previously dereferenced</ShortMessage>
+    <LongMessage>Nullcheck of thread at line 89 of value previously dereferenced in com.gmsxo.domains.controller.ThreadController.startRunningThreads(List)</LongMessage>
+    <Class classname="com.gmsxo.domains.controller.ThreadController" primary="true">
+      <SourceLine classname="com.gmsxo.domains.controller.ThreadController" start="22" end="145" sourcefile="ThreadController.java" sourcepath="com/gmsxo/domains/controller/ThreadController.java" relSourcepath="com\gmsxo\domains\controller\ThreadController.java">
+        <Message>At ThreadController.java:[lines 22-145]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.controller.ThreadController</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.controller.ThreadController" name="startRunningThreads" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.controller.ThreadController" start="84" end="94" startBytecode="0" endBytecode="263" sourcefile="ThreadController.java" sourcepath="com/gmsxo/domains/controller/ThreadController.java" relSourcepath="com\gmsxo\domains\controller\ThreadController.java"/>
+      <Message>In method com.gmsxo.domains.controller.ThreadController.startRunningThreads(List)</Message>
+    </Method>
+    <LocalVariable name="thread" register="4" pc="86" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from thread</Message>
+    </LocalVariable>
+    <Method classname="com.gmsxo.domains.controller.ThreadController" name="startThread" signature="(Lcom/gmsxo/domains/data/AppThread;)Ljava/lang/Thread;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.controller.ThreadController" start="127" end="133" startBytecode="0" endBytecode="203" sourcefile="ThreadController.java" sourcepath="com/gmsxo/domains/controller/ThreadController.java" relSourcepath="com\gmsxo\domains\controller\ThreadController.java"/>
+      <Message>Return value of com.gmsxo.domains.controller.ThreadController.startThread(AppThread)</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.controller.ThreadController" primary="true" start="89" end="89" startBytecode="83" endBytecode="83" sourcefile="ThreadController.java" sourcepath="com/gmsxo/domains/controller/ThreadController.java" relSourcepath="com\gmsxo\domains\controller\ThreadController.java">
+      <Message>At ThreadController.java:[line 89]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.controller.ThreadController" start="90" end="90" startBytecode="88" endBytecode="88" sourcefile="ThreadController.java" sourcepath="com/gmsxo/domains/controller/ThreadController.java" relSourcepath="com\gmsxo\domains\controller\ThreadController.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ThreadController.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_ARRAY" priority="1" abbrev="MS" category="MALICIOUS_CODE" instanceHash="20f0e546f6d124525cc1ea1c4c62496f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Field is a mutable array</ShortMessage>
+    <LongMessage>com.gmsxo.domains.data.IpAddress.errors is a mutable array</LongMessage>
+    <Class classname="com.gmsxo.domains.data.IpAddress" primary="true">
+      <SourceLine classname="com.gmsxo.domains.data.IpAddress" start="1" end="145" sourcefile="IpAddress.java" sourcepath="com/gmsxo/domains/data/IpAddress.java" relSourcepath="com\gmsxo\domains\data\IpAddress.java">
+        <Message>At IpAddress.java:[lines 1-145]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.data.IpAddress</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.data.IpAddress" name="errors" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.data.IpAddress" sourcefile="IpAddress.java" sourcepath="com/gmsxo/domains/data/IpAddress.java" relSourcepath="com\gmsxo\domains\data\IpAddress.java">
+        <Message>In IpAddress.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.data.IpAddress.errors</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.data.IpAddress" primary="true" start="48" end="48" startBytecode="161" endBytecode="161" sourcefile="IpAddress.java" sourcepath="com/gmsxo/domains/data/IpAddress.java" relSourcepath="com\gmsxo\domains\data\IpAddress.java">
+      <Message>At IpAddress.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IC_INIT_CIRCULARITY" priority="2" abbrev="IC" category="STYLE" instanceHash="11f61de7646e28d1e4b8738cb6fb7b74" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Initialization circularity</ShortMessage>
+    <LongMessage>Initialization circularity between com.gmsxo.domains.db.DBFacade and com.gmsxo.domains.db.DBUtil</LongMessage>
+    <Class classname="com.gmsxo.domains.db.DBFacade" primary="true">
+      <SourceLine classname="com.gmsxo.domains.db.DBFacade" start="17" end="184" sourcefile="DBFacade.java" sourcepath="com/gmsxo/domains/db/DBFacade.java" relSourcepath="com\gmsxo\domains\db\DBFacade.java">
+        <Message>At DBFacade.java:[lines 17-184]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.db.DBFacade</Message>
+    </Class>
+    <Class classname="com.gmsxo.domains.db.DBUtil">
+      <SourceLine classname="com.gmsxo.domains.db.DBUtil" start="17" end="174" sourcefile="DBUtil.java" sourcepath="com/gmsxo/domains/db/DBUtil.java" relSourcepath="com\gmsxo\domains\db\DBUtil.java">
+        <Message>At DBUtil.java:[lines 17-174]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.db.DBUtil</Message>
+    </Class>
+    <SourceLine classname="com.gmsxo.domains.db.DBFacade" start="17" end="184" sourcefile="DBFacade.java" sourcepath="com/gmsxo/domains/db/DBFacade.java" relSourcepath="com\gmsxo\domains\db\DBFacade.java" synthetic="true">
+      <Message>At DBFacade.java:[lines 17-184]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS" instanceHash="7c03f31a5e25a80d8762ab3e7e7f07be" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="11">
+    <ShortMessage>Nullcheck of value previously dereferenced</ShortMessage>
+    <LongMessage>Nullcheck of DomainMB.selectedDomainName at line 79 of value previously dereferenced in com.gmsxo.domains.db.mb.DomainMB.getDomain()</LongMessage>
+    <Class classname="com.gmsxo.domains.db.mb.DomainMB" primary="true">
+      <SourceLine classname="com.gmsxo.domains.db.mb.DomainMB" start="31" end="153" sourcefile="DomainMB.java" sourcepath="com/gmsxo/domains/db/mb/DomainMB.java" relSourcepath="com\gmsxo\domains\db\mb\DomainMB.java">
+        <Message>At DomainMB.java:[lines 31-153]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.db.mb.DomainMB</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.db.mb.DomainMB" name="getDomain" signature="()Lcom/gmsxo/domains/data/Domain;" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.db.mb.DomainMB" start="76" end="83" startBytecode="0" endBytecode="166" sourcefile="DomainMB.java" sourcepath="com/gmsxo/domains/db/mb/DomainMB.java" relSourcepath="com\gmsxo\domains\db\mb\DomainMB.java"/>
+      <Message>In method com.gmsxo.domains.db.mb.DomainMB.getDomain()</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.db.mb.DomainMB" name="selectedDomainName" signature="Ljava/lang/String;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.db.mb.DomainMB" sourcefile="DomainMB.java" sourcepath="com/gmsxo/domains/db/mb/DomainMB.java" relSourcepath="com\gmsxo\domains\db\mb\DomainMB.java">
+        <Message>In DomainMB.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field com.gmsxo.domains.db.mb.DomainMB.selectedDomainName</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.db.mb.DomainMB" primary="true" start="78" end="78" startBytecode="34" endBytecode="34" sourcefile="DomainMB.java" sourcepath="com/gmsxo/domains/db/mb/DomainMB.java" relSourcepath="com\gmsxo\domains\db\mb\DomainMB.java">
+      <Message>At DomainMB.java:[line 78]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.db.mb.DomainMB" start="79" end="79" startBytecode="49" endBytecode="49" sourcefile="DomainMB.java" sourcepath="com/gmsxo/domains/db/mb/DomainMB.java" relSourcepath="com\gmsxo\domains\db\mb\DomainMB.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at DomainMB.java:[line 79]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" instanceHash="af2aa985fd3b2219bce3c14644c60433" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to data in com.gmsxo.domains.dns.dnsclient.DnsClient.doUdpQuery(Packet, InetAddress, int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.DnsClient" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsClient" start="71" end="627" sourcefile="DnsClient.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsClient.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsClient.java">
+        <Message>At DnsClient.java:[lines 71-627]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.DnsClient</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.dns.dnsclient.DnsClient" name="doUdpQuery" signature="(Lcom/gmsxo/domains/dns/dnsclient/Packet;Ljava/net/InetAddress;III)[B" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsClient" start="386" end="388" startBytecode="0" endBytecode="103" sourcefile="DnsClient.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsClient.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsClient.java"/>
+      <Message>In method com.gmsxo.domains.dns.dnsclient.DnsClient.doUdpQuery(Packet, InetAddress, int, int, int)</Message>
+    </Method>
+    <LocalVariable name="data" register="17" pc="121" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named data</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsClient" primary="true" start="413" end="413" startBytecode="119" endBytecode="119" sourcefile="DnsClient.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsClient.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsClient.java">
+      <Message>At DnsClient.java:[line 413]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="data"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" abbrev="REC" category="STYLE" instanceHash="e750f668730ff819bb9c62c28c066668" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in com.gmsxo.domains.dns.dnsclient.DnsClient.query(DnsName, int, int, boolean, boolean)</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.DnsClient" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsClient" start="71" end="627" sourcefile="DnsClient.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsClient.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsClient.java">
+        <Message>At DnsClient.java:[lines 71-627]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.DnsClient</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.dns.dnsclient.DnsClient" name="query" signature="(Lcom/gmsxo/domains/dns/dnsclient/DnsName;IIZZ)Lcom/gmsxo/domains/dns/dnsclient/ResourceRecords;" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsClient" start="171" end="301" startBytecode="0" endBytecode="1566" sourcefile="DnsClient.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsClient.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsClient.java"/>
+      <Message>In method com.gmsxo.domains.dns.dnsclient.DnsClient.query(DnsName, int, int, boolean, boolean)</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsClient" primary="true" start="258" end="258" startBytecode="377" endBytecode="377" sourcefile="DnsClient.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsClient.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsClient.java">
+      <Message>At DnsClient.java:[line 258]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="6711f5ce13247077545de838c59e7305" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new com.gmsxo.domains.dns.dnsclient.DnsContext(String, String[], Hashtable) may expose internal representation by storing an externally mutable object into DnsContext.servers</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.DnsContext" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsContext" start="60" end="798" sourcefile="DnsContext.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsContext.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsContext.java">
+        <Message>At DnsContext.java:[lines 60-798]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.DnsContext</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.dns.dnsclient.DnsContext" name="&lt;init&gt;" signature="(Ljava/lang/String;[Ljava/lang/String;Ljava/util/Hashtable;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsContext" start="92" end="102" startBytecode="0" endBytecode="253" sourcefile="DnsContext.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsContext.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsContext.java"/>
+      <Message>In method new com.gmsxo.domains.dns.dnsclient.DnsContext(String, String[], Hashtable)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.dns.dnsclient.DnsContext" name="servers" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsContext" sourcefile="DnsContext.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsContext.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsContext.java">
+        <Message>In DnsContext.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.dns.dnsclient.DnsContext.servers</Message>
+    </Field>
+    <LocalVariable name="servers" register="2" pc="49" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named servers</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsContext" primary="true" start="95" end="95" startBytecode="49" endBytecode="49" sourcefile="DnsContext.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsContext.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsContext.java">
+      <Message>At DnsContext.java:[line 95]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" abbrev="Eq" category="BAD_PRACTICE" instanceHash="d304fe659a0d00ed361fec0b5deb2d3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="14">
+    <ShortMessage>Equals checks for incompatible operand</ShortMessage>
+    <LongMessage>com.gmsxo.domains.dns.dnsclient.DnsName.equals(Object) checks for operand being a javax.naming.CompositeName </LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.DnsName" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsName" start="109" end="607" sourcefile="DnsName.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsName.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsName.java">
+        <Message>At DnsName.java:[lines 109-607]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.DnsName</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.dns.dnsclient.DnsName" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsName" start="216" end="220" startBytecode="0" endBytecode="143" sourcefile="DnsName.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsName.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsName.java"/>
+      <Message>In method com.gmsxo.domains.dns.dnsclient.DnsName.equals(Object)</Message>
+    </Method>
+    <Type descriptor="Ljavax/naming/CompositeName;" role="TYPE_FOUND">
+      <SourceLine classname="javax.naming.CompositeName" start="217" end="586" sourcefile="CompositeName.java" sourcepath="javax/naming/CompositeName.java">
+        <Message>At CompositeName.java:[lines 217-586]</Message>
+      </SourceLine>
+      <Message>Actual type javax.naming.CompositeName</Message>
+    </Type>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.DnsName" primary="true" start="216" end="216" startBytecode="8" endBytecode="8" sourcefile="DnsName.java" sourcepath="com/gmsxo/domains/dns/dnsclient/DnsName.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\DnsName.java">
+      <Message>At DnsName.java:[line 216]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="ad151861e33dcc9c92c77d44ab780e2d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: com.gmsxo.domains.dns.dnsclient.Header.numAdditionals</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" start="70" end="124" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>At Header.java:[lines 70-124]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.Header</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.dns.dnsclient.Header" name="numAdditionals" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>In Header.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.dns.dnsclient.Header.numAdditionals</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true" start="109" end="109" startBytecode="195" endBytecode="195" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+      <Message>At Header.java:[line 109]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="690b376f9f5bdf10ddb65dacdb430ecd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: com.gmsxo.domains.dns.dnsclient.Header.opcode</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" start="70" end="124" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>At Header.java:[lines 70-124]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.Header</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.dns.dnsclient.Header" name="opcode" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>In Header.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.dns.dnsclient.Header.opcode</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true" start="95" end="95" startBytecode="69" endBytecode="69" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+      <Message>At Header.java:[line 95]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="73d97211cd20c610021d2cd5d0fd1e06" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: com.gmsxo.domains.dns.dnsclient.Header.recursionAvail</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" start="70" end="124" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>At Header.java:[lines 70-124]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.Header</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.dns.dnsclient.Header" name="recursionAvail" signature="Z" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>In Header.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.dns.dnsclient.Header.recursionAvail</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true" start="99" end="99" startBytecode="141" endBytecode="141" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+      <Message>At Header.java:[line 99]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="ff0cf5bba00d7148026e41303453e9c0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: com.gmsxo.domains.dns.dnsclient.Header.recursionDesired</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" start="70" end="124" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>At Header.java:[lines 70-124]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.Header</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.dns.dnsclient.Header" name="recursionDesired" signature="Z" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+        <Message>In Header.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.dns.dnsclient.Header.recursionDesired</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.Header" primary="true" start="98" end="98" startBytecode="123" endBytecode="123" sourcefile="Header.java" sourcepath="com/gmsxo/domains/dns/dnsclient/Header.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\Header.java">
+      <Message>At Header.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE" instanceHash="b8522473e5813bb24d2199c2750e0a55" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="15">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to pos in com.gmsxo.domains.dns.dnsclient.ResourceRecord.decodeHinfo(int)</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" start="62" end="587" sourcefile="ResourceRecord.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecord.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecord.java">
+        <Message>At ResourceRecord.java:[lines 62-587]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.ResourceRecord</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" name="decodeHinfo" signature="(I)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" start="477" end="481" startBytecode="0" endBytecode="26" sourcefile="ResourceRecord.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecord.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecord.java"/>
+      <Message>In method com.gmsxo.domains.dns.dnsclient.ResourceRecord.decodeHinfo(int)</Message>
+    </Method>
+    <LocalVariable name="pos" register="1" pc="37" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named pos</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" primary="true" start="480" end="480" startBytecode="36" endBytecode="36" sourcefile="ResourceRecord.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecord.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecord.java">
+      <Message>At ResourceRecord.java:[line 480]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="pos"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="33107e157d613c97523b15abc03d540b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: com.gmsxo.domains.dns.dnsclient.ResourceRecord.msgLen</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" start="62" end="587" sourcefile="ResourceRecord.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecord.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecord.java">
+        <Message>At ResourceRecord.java:[lines 62-587]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.ResourceRecord</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" name="msgLen" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" sourcefile="ResourceRecord.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecord.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecord.java">
+        <Message>In ResourceRecord.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.dns.dnsclient.ResourceRecord.msgLen</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecord" primary="true" start="121" end="121" startBytecode="26" endBytecode="26" sourcefile="ResourceRecord.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecord.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecord.java">
+      <Message>At ResourceRecord.java:[line 121]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="ca6b988abbd037e0122c783244ada3cc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: com.gmsxo.domains.dns.dnsclient.ResourceRecords.additional</LongMessage>
+    <Class classname="com.gmsxo.domains.dns.dnsclient.ResourceRecords" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecords" start="48" end="139" sourcefile="ResourceRecords.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecords.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecords.java">
+        <Message>At ResourceRecords.java:[lines 48-139]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.dns.dnsclient.ResourceRecords</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.dns.dnsclient.ResourceRecords" name="additional" signature="Ljava/util/Vector;" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecords" sourcefile="ResourceRecords.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecords.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecords.java">
+        <Message>In ResourceRecords.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.dns.dnsclient.ResourceRecords.additional</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.dns.dnsclient.ResourceRecords" primary="true" start="51" end="51" startBytecode="45" endBytecode="45" sourcefile="ResourceRecords.java" sourcepath="com/gmsxo/domains/dns/dnsclient/ResourceRecords.java" relSourcepath="com\gmsxo\domains\dns\dnsclient\ResourceRecords.java">
+      <Message>At ResourceRecords.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_ARRAY" priority="1" abbrev="MS" category="MALICIOUS_CODE" instanceHash="7cfccfc5f648ab935059207b724fe067" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Field is a mutable array</ShortMessage>
+    <LongMessage>com.gmsxo.domains.helpers.ImportHelper.pref is a mutable array</LongMessage>
+    <Class classname="com.gmsxo.domains.helpers.ImportHelper" primary="true">
+      <SourceLine classname="com.gmsxo.domains.helpers.ImportHelper" start="9" end="71" sourcefile="ImportHelper.java" sourcepath="com/gmsxo/domains/helpers/ImportHelper.java" relSourcepath="com\gmsxo\domains\helpers\ImportHelper.java">
+        <Message>At ImportHelper.java:[lines 9-71]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.helpers.ImportHelper</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.helpers.ImportHelper" name="pref" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.helpers.ImportHelper" sourcefile="ImportHelper.java" sourcepath="com/gmsxo/domains/helpers/ImportHelper.java" relSourcepath="com\gmsxo\domains\helpers\ImportHelper.java">
+        <Message>In ImportHelper.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.helpers.ImportHelper.pref</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.helpers.ImportHelper" primary="true" start="13" end="13" startBytecode="167" endBytecode="167" sourcefile="ImportHelper.java" sourcepath="com/gmsxo/domains/helpers/ImportHelper.java" relSourcepath="com\gmsxo\domains\helpers\ImportHelper.java">
+      <Message>At ImportHelper.java:[line 13]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" abbrev="DLS" category="STYLE" instanceHash="7046802599fb91e1bbb317e1d45aa5df" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="15">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to insertDomainResultList in com.gmsxo.domains.imports.ImportDNS.doThreadJob(String, String, int, int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.ImportDNS" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" start="27" end="175" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+        <Message>At ImportDNS.java:[lines 27-175]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.ImportDNS</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.ImportDNS" name="doThreadJob" signature="(Ljava/lang/String;Ljava/lang/String;IIII)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" start="92" end="175" startBytecode="0" endBytecode="255" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java"/>
+      <Message>In method com.gmsxo.domains.imports.ImportDNS.doThreadJob(String, String, int, int, int, int)</Message>
+    </Method>
+    <LocalVariable name="insertDomainResultList" register="16" pc="62" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named insertDomainResultList</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" primary="true" start="102" end="102" startBytecode="60" endBytecode="60" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+      <Message>At ImportDNS.java:[line 102]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="insertDomainResultList"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE" instanceHash="f564a6bb9340503b921b90cefd56d74c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field com.gmsxo.domains.imports.ImportDNS.requestCounter from instance method com.gmsxo.domains.imports.ImportDNS.doThreadJob(String, String, int, int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.ImportDNS" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" start="27" end="175" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+        <Message>At ImportDNS.java:[lines 27-175]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.ImportDNS</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.ImportDNS" name="doThreadJob" signature="(Ljava/lang/String;Ljava/lang/String;IIII)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" start="92" end="175" startBytecode="0" endBytecode="1456" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java"/>
+      <Message>In method com.gmsxo.domains.imports.ImportDNS.doThreadJob(String, String, int, int, int, int)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.imports.ImportDNS" name="requestCounter" signature="J" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+        <Message>In ImportDNS.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.imports.ImportDNS.requestCounter</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" primary="true" start="112" end="112" startBytecode="139" endBytecode="139" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+      <Message>At ImportDNS.java:[line 112]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" start="144" end="144" startBytecode="311" endBytecode="311" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at ImportDNS.java:[line 144]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE" instanceHash="553426e3af607ce9843ea1a4adc3de39" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field com.gmsxo.domains.imports.ImportDNS.resultCounter from instance method com.gmsxo.domains.imports.ImportDNS.doThreadJob(String, String, int, int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.ImportDNS" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" start="27" end="175" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+        <Message>At ImportDNS.java:[lines 27-175]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.ImportDNS</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.ImportDNS" name="doThreadJob" signature="(Ljava/lang/String;Ljava/lang/String;IIII)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" start="92" end="175" startBytecode="0" endBytecode="1456" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java"/>
+      <Message>In method com.gmsxo.domains.imports.ImportDNS.doThreadJob(String, String, int, int, int, int)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.imports.ImportDNS" name="resultCounter" signature="J" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+        <Message>In ImportDNS.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.imports.ImportDNS.resultCounter</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.imports.ImportDNS" primary="true" start="141" end="141" startBytecode="259" endBytecode="259" sourcefile="ImportDNS.java" sourcepath="com/gmsxo/domains/imports/ImportDNS.java" relSourcepath="com\gmsxo\domains\imports\ImportDNS.java">
+      <Message>At ImportDNS.java:[line 141]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="b59146a2216c78eb18785a9bfa985711" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.InsertDNSThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.InsertDNSThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDNSThread" start="509" end="547" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 509-547]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.InsertDNSThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.InsertDNSThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDNSThread" start="514" end="547" startBytecode="0" endBytecode="725" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.InsertDNSThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.InsertDNSThread" primary="true" start="541" end="541" startBytecode="328" endBytecode="328" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 541]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE" instanceHash="aad28a123e204ead7bda1d50af3ce179" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of fileName, which is known to be non-null in com.gmsxo.domains.imports.InsertDomains.doJob(String)</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.InsertDomains" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDomains" start="31" end="309" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 31-309]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.InsertDomains</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.InsertDomains" name="doJob" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDomains" start="131" end="228" startBytecode="0" endBytecode="2378" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.InsertDomains.doJob(String)</Message>
+    </Method>
+    <LocalVariable name="fileName" register="5" pc="1106" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from fileName</Message>
+    </LocalVariable>
+    <Method classname="com.gmsxo.domains.helpers.FileHelper" name="getNextFile" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.helpers.FileHelper" start="57" end="60" startBytecode="0" endBytecode="143" sourcefile="FileHelper.java" sourcepath="com/gmsxo/domains/helpers/FileHelper.java" relSourcepath="com\gmsxo\domains\helpers\FileHelper.java"/>
+      <Message>Return value of com.gmsxo.domains.helpers.FileHelper.getNextFile(String, String)</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.InsertDomains" primary="true" start="219" end="219" startBytecode="1108" endBytecode="1108" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at InsertDomains.java:[line 219]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="47ddc2c99efdaa836ad709becd39053e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.InsertDomainsThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.InsertDomainsThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDomainsThread" start="314" end="440" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 314-440]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.InsertDomainsThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.InsertDomainsThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDomainsThread" start="326" end="440" startBytecode="0" endBytecode="1760" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.InsertDomainsThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.InsertDomainsThread" primary="true" start="334" end="334" startBytecode="31" endBytecode="31" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 334]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS" instanceHash="d38ce238395a4e6853ac83079275153d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="8">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of err in com.gmsxo.domains.imports.InsertDomainsThread.run()</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.InsertDomainsThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDomainsThread" start="314" end="440" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 314-440]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.InsertDomainsThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.InsertDomainsThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertDomainsThread" start="326" end="440" startBytecode="0" endBytecode="1760" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.InsertDomainsThread.run()</Message>
+    </Method>
+    <LocalVariable name="err" register="3" pc="239" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from err</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.imports.InsertDomainsThread" primary="true" start="352" end="352" startBytecode="241" endBytecode="241" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at InsertDomains.java:[line 352]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.imports.InsertDomainsThread" start="345" end="345" startBytecode="121" endBytecode="121" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at InsertDomains.java:[line 345]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="767bf1ad0b3ba5bb315f1ebeaff47312" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.InsertIPThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.InsertIPThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertIPThread" start="444" end="495" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 444-495]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.InsertIPThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.InsertIPThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.InsertIPThread" start="461" end="495" startBytecode="0" endBytecode="728" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.InsertIPThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.InsertIPThread" primary="true" start="489" end="489" startBytecode="332" endBytecode="332" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 489]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="946f8e282b110c6652685fc716f7ba6a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v1.InsertDNSThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v1.InsertDNSThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDNSThread" start="478" end="516" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 478-516]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v1.InsertDNSThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v1.InsertDNSThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDNSThread" start="483" end="516" startBytecode="0" endBytecode="725" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v1.InsertDNSThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDNSThread" primary="true" start="510" end="510" startBytecode="328" endBytecode="328" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 510]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE" instanceHash="44b29c26658cd04c9f3177e47487e2bb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v1.InsertDomains.pref should be package protected</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v1.InsertDomains" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomains" start="31" end="312" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 31-312]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v1.InsertDomains</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.imports.v1.InsertDomains" name="pref" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomains" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+        <Message>In InsertDomains.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.imports.v1.InsertDomains.pref</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomains" primary="true" start="68" end="68" startBytecode="175" endBytecode="175" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE" instanceHash="c8dba92bd0230bb9275e43511dfac4f3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of fileName, which is known to be non-null in com.gmsxo.domains.imports.v1.InsertDomains.doJob(String)</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v1.InsertDomains" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomains" start="31" end="312" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 31-312]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v1.InsertDomains</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v1.InsertDomains" name="doJob" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomains" start="124" end="228" startBytecode="0" endBytecode="2467" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v1.InsertDomains.doJob(String)</Message>
+    </Method>
+    <LocalVariable name="fileName" register="5" pc="1163" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from fileName</Message>
+    </LocalVariable>
+    <Method classname="com.gmsxo.domains.helpers.FileHelper" name="getNextFile" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.helpers.FileHelper" start="57" end="60" startBytecode="0" endBytecode="143" sourcefile="FileHelper.java" sourcepath="com/gmsxo/domains/helpers/FileHelper.java" relSourcepath="com\gmsxo\domains\helpers\FileHelper.java"/>
+      <Message>Return value of com.gmsxo.domains.helpers.FileHelper.getNextFile(String, String)</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomains" primary="true" start="219" end="219" startBytecode="1165" endBytecode="1165" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at InsertDomains.java:[line 219]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="203557e6548bea109c98563a950481df" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v1.InsertDomainsThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" start="317" end="409" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 317-409]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v1.InsertDomainsThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" start="329" end="409" startBytecode="0" endBytecode="1429" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v1.InsertDomainsThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" primary="true" start="337" end="337" startBytecode="31" endBytecode="31" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 337]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS" instanceHash="991fb72d333f88d21e09a27d4edb3436" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="8">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of err in com.gmsxo.domains.imports.v1.InsertDomainsThread.run()</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" start="317" end="409" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 317-409]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v1.InsertDomainsThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" start="329" end="409" startBytecode="0" endBytecode="1429" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v1.InsertDomainsThread.run()</Message>
+    </Method>
+    <LocalVariable name="err" register="3" pc="206" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from err</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" primary="true" start="351" end="351" startBytecode="208" endBytecode="208" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at InsertDomains.java:[line 351]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.imports.v1.InsertDomainsThread" start="345" end="345" startBytecode="88" endBytecode="88" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at InsertDomains.java:[line 345]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="ee638d196f16eaeeb43401aa1098c7e2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v1.InsertIPThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v1.InsertIPThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertIPThread" start="413" end="464" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 413-464]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v1.InsertIPThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v1.InsertIPThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v1.InsertIPThread" start="430" end="464" startBytecode="0" endBytecode="728" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v1.InsertIPThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v1.InsertIPThread" primary="true" start="458" end="458" startBytecode="332" endBytecode="332" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v1/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v1\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 458]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="af3147461289cdc7f1c148826af5bf45" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v2.InsertDNSThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v2.InsertDNSThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDNSThread" start="482" end="520" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 482-520]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v2.InsertDNSThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v2.InsertDNSThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDNSThread" start="487" end="520" startBytecode="0" endBytecode="725" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v2.InsertDNSThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDNSThread" primary="true" start="514" end="514" startBytecode="328" endBytecode="328" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 514]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE" instanceHash="e89d0b07ac2822bfb017d0be5a9dec8c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v2.InsertDomains.pref should be package protected</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v2.InsertDomains" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomains" start="31" end="313" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 31-313]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v2.InsertDomains</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.imports.v2.InsertDomains" name="pref" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomains" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+        <Message>In InsertDomains.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.imports.v2.InsertDomains.pref</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomains" primary="true" start="68" end="68" startBytecode="175" endBytecode="175" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE" instanceHash="68018f9428aa450be712c2970434bc02" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of fileName, which is known to be non-null in com.gmsxo.domains.imports.v2.InsertDomains.doJob(String)</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v2.InsertDomains" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomains" start="31" end="313" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 31-313]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v2.InsertDomains</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v2.InsertDomains" name="doJob" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomains" start="125" end="229" startBytecode="0" endBytecode="2467" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v2.InsertDomains.doJob(String)</Message>
+    </Method>
+    <LocalVariable name="fileName" register="5" pc="1163" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from fileName</Message>
+    </LocalVariable>
+    <Method classname="com.gmsxo.domains.helpers.FileHelper" name="getNextFile" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.helpers.FileHelper" start="57" end="60" startBytecode="0" endBytecode="143" sourcefile="FileHelper.java" sourcepath="com/gmsxo/domains/helpers/FileHelper.java" relSourcepath="com\gmsxo\domains\helpers\FileHelper.java"/>
+      <Message>Return value of com.gmsxo.domains.helpers.FileHelper.getNextFile(String, String)</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomains" primary="true" start="220" end="220" startBytecode="1165" endBytecode="1165" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at InsertDomains.java:[line 220]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="1bffdf42a920bb91af5e70f43298567a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v2.InsertDomainsThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" start="318" end="413" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 318-413]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v2.InsertDomainsThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" start="330" end="413" startBytecode="0" endBytecode="1483" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v2.InsertDomainsThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" primary="true" start="338" end="338" startBytecode="31" endBytecode="31" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 338]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS" instanceHash="b6dcb9234eaaea414edc9c9b5aa8afdd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="8">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of err in com.gmsxo.domains.imports.v2.InsertDomainsThread.run()</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" start="318" end="413" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 318-413]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v2.InsertDomainsThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" start="330" end="413" startBytecode="0" endBytecode="1483" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v2.InsertDomainsThread.run()</Message>
+    </Method>
+    <LocalVariable name="err" register="3" pc="205" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from err</Message>
+    </LocalVariable>
+    <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" primary="true" start="352" end="352" startBytecode="207" endBytecode="207" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at InsertDomains.java:[line 352]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.imports.v2.InsertDomainsThread" start="346" end="346" startBytecode="88" endBytecode="88" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at InsertDomains.java:[line 346]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="55f7f4200741019b14cdc08e5dfd3916" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v2.InsertIPThread.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v2.InsertIPThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertIPThread" start="417" end="468" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 417-468]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v2.InsertIPThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v2.InsertIPThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v2.InsertIPThread" start="434" end="468" startBytecode="0" endBytecode="728" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v2.InsertIPThread.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v2.InsertIPThread" primary="true" start="462" end="462" startBytecode="332" endBytecode="332" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v2/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v2\InsertDomains.java">
+      <Message>At InsertDomains.java:[line 462]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE" instanceHash="bfc549497288726551b5358d197425a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of fileName, which is known to be non-null in com.gmsxo.domains.imports.v3.InsertDomains.doJob(String)</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v3.InsertDomains" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v3.InsertDomains" start="21" end="126" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v3/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v3\InsertDomains.java">
+        <Message>At InsertDomains.java:[lines 21-126]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v3.InsertDomains</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v3.InsertDomains" name="doJob" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v3.InsertDomains" start="40" end="126" startBytecode="0" endBytecode="2244" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v3/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v3\InsertDomains.java"/>
+      <Message>In method com.gmsxo.domains.imports.v3.InsertDomains.doJob(String)</Message>
+    </Method>
+    <LocalVariable name="fileName" register="17" pc="849" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from fileName</Message>
+    </LocalVariable>
+    <Method classname="com.gmsxo.domains.helpers.FileHelper" name="getNextFile" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.helpers.FileHelper" start="57" end="60" startBytecode="0" endBytecode="143" sourcefile="FileHelper.java" sourcepath="com/gmsxo/domains/helpers/FileHelper.java" relSourcepath="com\gmsxo\domains\helpers\FileHelper.java"/>
+      <Message>Return value of com.gmsxo.domains.helpers.FileHelper.getNextFile(String, String)</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v3.InsertDomains" primary="true" start="117" end="117" startBytecode="851" endBytecode="851" sourcefile="InsertDomains.java" sourcepath="com/gmsxo/domains/imports/v3/InsertDomains.java" relSourcepath="com\gmsxo\domains\imports\v3\InsertDomains.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at InsertDomains.java:[line 117]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" abbrev="RCN" category="CORRECTNESS" instanceHash="f204549bf95ed1fdaefa7d0cf88abed1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="11">
+    <ShortMessage>Nullcheck of value previously dereferenced</ShortMessage>
+    <LongMessage>Nullcheck of InserterThread.records at line 60 of value previously dereferenced in com.gmsxo.domains.imports.v3.InserterThread.run()</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v3.InserterThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v3.InserterThread" start="49" end="90" sourcefile="Inserter.java" sourcepath="com/gmsxo/domains/imports/v3/Inserter.java" relSourcepath="com\gmsxo\domains\imports\v3\Inserter.java">
+        <Message>At Inserter.java:[lines 49-90]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v3.InserterThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v3.InserterThread" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v3.InserterThread" start="57" end="90" startBytecode="0" endBytecode="856" sourcefile="Inserter.java" sourcepath="com/gmsxo/domains/imports/v3/Inserter.java" relSourcepath="com\gmsxo\domains\imports\v3\Inserter.java"/>
+      <Message>In method com.gmsxo.domains.imports.v3.InserterThread.run()</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.imports.v3.InserterThread" name="records" signature="Ljava/util/SortedMap;" sourceSignature="Ljava/util/SortedMap&lt;Ljava/lang/String;Lcom/gmsxo/domains/data/Insertable;&gt;;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.imports.v3.InserterThread" sourcefile="Inserter.java" sourcepath="com/gmsxo/domains/imports/v3/Inserter.java" relSourcepath="com\gmsxo\domains\imports\v3\Inserter.java">
+        <Message>In Inserter.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field com.gmsxo.domains.imports.v3.InserterThread.records</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.imports.v3.InserterThread" primary="true" start="57" end="57" startBytecode="16" endBytecode="16" sourcefile="Inserter.java" sourcepath="com/gmsxo/domains/imports/v3/Inserter.java" relSourcepath="com\gmsxo\domains\imports\v3\Inserter.java">
+      <Message>At Inserter.java:[line 57]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.imports.v3.InserterThread" start="60" end="60" startBytecode="38" endBytecode="38" sourcefile="Inserter.java" sourcepath="com/gmsxo/domains/imports/v3/Inserter.java" relSourcepath="com\gmsxo\domains\imports\v3\Inserter.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at Inserter.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="5589f4d3d3d552068acb9a736edebb84" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.imports.v3.PgloaderCaller.run() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.imports.v3.PgloaderCaller" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v3.PgloaderCaller" start="10" end="35" sourcefile="PgloaderCaller.java" sourcepath="com/gmsxo/domains/imports/v3/PgloaderCaller.java" relSourcepath="com\gmsxo\domains\imports\v3\PgloaderCaller.java">
+        <Message>At PgloaderCaller.java:[lines 10-35]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.imports.v3.PgloaderCaller</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.imports.v3.PgloaderCaller" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.imports.v3.PgloaderCaller" start="17" end="35" startBytecode="0" endBytecode="412" sourcefile="PgloaderCaller.java" sourcepath="com/gmsxo/domains/imports/v3/PgloaderCaller.java" relSourcepath="com\gmsxo\domains\imports\v3\PgloaderCaller.java"/>
+      <Message>In method com.gmsxo.domains.imports.v3.PgloaderCaller.run()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.imports.v3.PgloaderCaller" primary="true" start="26" end="26" startBytecode="148" endBytecode="148" sourcefile="PgloaderCaller.java" sourcepath="com/gmsxo/domains/imports/v3/PgloaderCaller.java" relSourcepath="com\gmsxo\domains\imports\v3\PgloaderCaller.java">
+      <Message>At PgloaderCaller.java:[line 26]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.imports.v3.PgloaderCaller" start="30" end="30" startBytecode="165" endBytecode="165" sourcefile="PgloaderCaller.java" sourcepath="com/gmsxo/domains/imports/v3/PgloaderCaller.java" relSourcepath="com\gmsxo\domains\imports\v3\PgloaderCaller.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at PgloaderCaller.java:[line 30]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.imports.v3.PgloaderCaller" start="33" end="33" startBytecode="182" endBytecode="182" sourcefile="PgloaderCaller.java" sourcepath="com/gmsxo/domains/imports/v3/PgloaderCaller.java" relSourcepath="com\gmsxo\domains\imports\v3\PgloaderCaller.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at PgloaderCaller.java:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" abbrev="IS" category="MT_CORRECTNESS" instanceHash="1076bab49ee6100410d41e0fbc884519" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Inconsistent synchronization</ShortMessage>
+    <LongMessage>Inconsistent synchronization of com.gmsxo.domains.resolve.ExportToFileThread.interrupted; locked 66% of time</LongMessage>
+    <Class classname="com.gmsxo.domains.resolve.ExportToFileThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" start="19" end="78" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java">
+        <Message>At ExportToFileThread.java:[lines 19-78]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.resolve.ExportToFileThread</Message>
+    </Class>
+    <Field classname="com.gmsxo.domains.resolve.ExportToFileThread" name="interrupted" signature="Z" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java">
+        <Message>In ExportToFileThread.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.resolve.ExportToFileThread.interrupted</Message>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT">
+      <Message>Synchronized 66% of the time</Message>
+    </Int>
+    <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" primary="true" start="42" end="42" startBytecode="96" endBytecode="96" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java" role="SOURCE_LINE_UNSYNC_ACCESS">
+      <Message>Unsynchronized access at ExportToFileThread.java:[line 42]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" start="59" end="59" startBytecode="13" endBytecode="13" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at ExportToFileThread.java:[line 59]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" start="59" end="59" startBytecode="29" endBytecode="29" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at ExportToFileThread.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WA_NOT_IN_LOOP" priority="2" abbrev="Wa" category="MT_CORRECTNESS" instanceHash="f28217923b78ccff7f935c5d09aeef6c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="14">
+    <ShortMessage>Wait not in loop </ShortMessage>
+    <LongMessage>Wait not in loop in com.gmsxo.domains.resolve.ExportToFileThread.getDomains()</LongMessage>
+    <Class classname="com.gmsxo.domains.resolve.ExportToFileThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" start="19" end="78" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java">
+        <Message>At ExportToFileThread.java:[lines 19-78]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.resolve.ExportToFileThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.resolve.ExportToFileThread" name="getDomains" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" start="59" end="62" startBytecode="0" endBytecode="163" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java"/>
+      <Message>In method com.gmsxo.domains.resolve.ExportToFileThread.getDomains()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.resolve.ExportToFileThread" primary="true" start="59" end="59" startBytecode="20" endBytecode="20" sourcefile="ExportToFileThread.java" sourcepath="com/gmsxo/domains/resolve/ExportToFileThread.java" relSourcepath="com\gmsxo\domains\resolve\ExportToFileThread.java">
+      <Message>At ExportToFileThread.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="1" abbrev="RCN" category="CORRECTNESS" instanceHash="ed2674433dcd12e3e9ceea2902c254ab" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="9">
+    <ShortMessage>Nullcheck of value previously dereferenced</ShortMessage>
+    <LongMessage>Nullcheck of IPResolver.topLevel at line 90 of value previously dereferenced in com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.resolve.IPResolver" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="30" end="190" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>At IPResolver.java:[lines 30-190]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.resolve.IPResolver</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.resolve.IPResolver" name="doJob" signature="(III)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="74" end="146" startBytecode="0" endBytecode="1617" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java"/>
+      <Message>In method com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.resolve.IPResolver" name="topLevel" signature="Ljava/lang/String;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>In IPResolver.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field com.gmsxo.domains.resolve.IPResolver.topLevel</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" primary="true" start="86" end="86" startBytecode="86" endBytecode="86" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+      <Message>At IPResolver.java:[line 86]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="90" end="90" startBytecode="132" endBytecode="132" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at IPResolver.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" instanceHash="4839b39231d133bf5e580ab5d631e7ba" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="15">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field com.gmsxo.domains.resolve.IPResolver.errorCounter from instance method com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.resolve.IPResolver" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="30" end="190" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>At IPResolver.java:[lines 30-190]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.resolve.IPResolver</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.resolve.IPResolver" name="doJob" signature="(III)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="74" end="146" startBytecode="0" endBytecode="1617" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java"/>
+      <Message>In method com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.resolve.IPResolver" name="errorCounter" signature="J" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>In IPResolver.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.resolve.IPResolver.errorCounter</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" primary="true" start="82" end="82" startBytecode="29" endBytecode="29" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+      <Message>At IPResolver.java:[line 82]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="121" end="121" startBytecode="476" endBytecode="476" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at IPResolver.java:[line 121]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" abbrev="ST" category="STYLE" instanceHash="ce4e0e98f18395b8ee82f70db6f455bb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="15">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field com.gmsxo.domains.resolve.IPResolver.requestCounter from instance method com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.resolve.IPResolver" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="30" end="190" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>At IPResolver.java:[lines 30-190]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.resolve.IPResolver</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.resolve.IPResolver" name="doJob" signature="(III)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="74" end="146" startBytecode="0" endBytecode="1617" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java"/>
+      <Message>In method com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.resolve.IPResolver" name="requestCounter" signature="J" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>In IPResolver.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.resolve.IPResolver.requestCounter</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" primary="true" start="81" end="81" startBytecode="25" endBytecode="25" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+      <Message>At IPResolver.java:[line 81]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="111" end="111" startBytecode="380" endBytecode="380" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at IPResolver.java:[line 111]</Message>
+    </SourceLine>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="126" end="126" startBytecode="564" endBytecode="564" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at IPResolver.java:[line 126]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE" instanceHash="282ca210841ad025b6869a042a6784ee" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="17">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field com.gmsxo.domains.resolve.IPResolver.resultCounter from instance method com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</LongMessage>
+    <Class classname="com.gmsxo.domains.resolve.IPResolver" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="30" end="190" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>At IPResolver.java:[lines 30-190]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.resolve.IPResolver</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.resolve.IPResolver" name="doJob" signature="(III)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" start="74" end="146" startBytecode="0" endBytecode="1617" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java"/>
+      <Message>In method com.gmsxo.domains.resolve.IPResolver.doJob(int, int, int)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.resolve.IPResolver" name="resultCounter" signature="J" isStatic="true" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+        <Message>In IPResolver.java</Message>
+      </SourceLine>
+      <Message>Field com.gmsxo.domains.resolve.IPResolver.resultCounter</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.resolve.IPResolver" primary="true" start="123" end="123" startBytecode="520" endBytecode="520" sourcefile="IPResolver.java" sourcepath="com/gmsxo/domains/resolve/IPResolver.java" relSourcepath="com\gmsxo\domains\resolve\IPResolver.java">
+      <Message>At IPResolver.java:[line 123]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" abbrev="NP" category="STYLE" instanceHash="8bd61349c0f7d7a380ba210424cfd5cc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in com.gmsxo.domains.resolve.NSLookupThread.parseAttributes(Domain, Attributes)</LongMessage>
+    <Class classname="com.gmsxo.domains.resolve.NSLookupThread" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.NSLookupThread" start="1" end="66" sourcefile="NSLookupThread.java" sourcepath="com/gmsxo/domains/resolve/NSLookupThread.java" relSourcepath="com\gmsxo\domains\resolve\NSLookupThread.java">
+        <Message>At NSLookupThread.java:[lines 1-66]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.resolve.NSLookupThread</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.resolve.NSLookupThread" name="parseAttributes" signature="(Lcom/gmsxo/domains/data/Domain;Ljavax/naming/directory/Attributes;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.resolve.NSLookupThread" start="27" end="47" startBytecode="0" endBytecode="100" sourcefile="NSLookupThread.java" sourcepath="com/gmsxo/domains/resolve/NSLookupThread.java" relSourcepath="com\gmsxo\domains\resolve\NSLookupThread.java"/>
+      <Message>In method com.gmsxo.domains.resolve.NSLookupThread.parseAttributes(Domain, Attributes)</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.resolve.NSLookupThread" primary="true" start="43" end="43" startBytecode="209" endBytecode="209" sourcefile="NSLookupThread.java" sourcepath="com/gmsxo/domains/resolve/NSLookupThread.java" relSourcepath="com\gmsxo\domains\resolve\NSLookupThread.java">
+      <Message>At NSLookupThread.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" abbrev="Dm" category="BAD_PRACTICE" instanceHash="6ca493aa7ddc238a15a6facdb85854f6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>com.gmsxo.domains.update.TestUpdate.doJob() invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="com.gmsxo.domains.update.TestUpdate" primary="true">
+      <SourceLine classname="com.gmsxo.domains.update.TestUpdate" start="22" end="151" sourcefile="TestUpdate.java" sourcepath="com/gmsxo/domains/update/TestUpdate.java" relSourcepath="com\gmsxo\domains\update\TestUpdate.java">
+        <Message>At TestUpdate.java:[lines 22-151]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.update.TestUpdate</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.update.TestUpdate" name="doJob" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.update.TestUpdate" start="42" end="151" startBytecode="0" endBytecode="2973" sourcefile="TestUpdate.java" sourcepath="com/gmsxo/domains/update/TestUpdate.java" relSourcepath="com\gmsxo\domains\update\TestUpdate.java"/>
+      <Message>In method com.gmsxo.domains.update.TestUpdate.doJob()</Message>
+    </Method>
+    <SourceLine classname="com.gmsxo.domains.update.TestUpdate" primary="true" start="134" end="134" startBytecode="1156" endBytecode="1156" sourcefile="TestUpdate.java" sourcepath="com/gmsxo/domains/update/TestUpdate.java" relSourcepath="com\gmsxo\domains\update\TestUpdate.java">
+      <Message>At TestUpdate.java:[line 134]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_UPDATE_STATIC" priority="1" abbrev="LI" category="MT_CORRECTNESS" instanceHash="e4ef6cffcd1cba547c7e6662f4a0686" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="6">
+    <ShortMessage>Incorrect lazy initialization and update of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization and update of static field com.gmsxo.domains.web.filter.LoginCheckFilter.allowedURIs in com.gmsxo.domains.web.filter.LoginCheckFilter.init(FilterConfig)</LongMessage>
+    <Class classname="com.gmsxo.domains.web.filter.LoginCheckFilter" primary="true">
+      <SourceLine classname="com.gmsxo.domains.web.filter.LoginCheckFilter" start="23" end="75" sourcefile="LoginCheckFilter.java" sourcepath="com/gmsxo/domains/web/filter/LoginCheckFilter.java" relSourcepath="com\gmsxo\domains\web\filter\LoginCheckFilter.java">
+        <Message>At LoginCheckFilter.java:[lines 23-75]</Message>
+      </SourceLine>
+      <Message>In class com.gmsxo.domains.web.filter.LoginCheckFilter</Message>
+    </Class>
+    <Method classname="com.gmsxo.domains.web.filter.LoginCheckFilter" name="init" signature="(Ljavax/servlet/FilterConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.gmsxo.domains.web.filter.LoginCheckFilter" start="31" end="44" startBytecode="0" endBytecode="47" sourcefile="LoginCheckFilter.java" sourcepath="com/gmsxo/domains/web/filter/LoginCheckFilter.java" relSourcepath="com\gmsxo\domains\web\filter\LoginCheckFilter.java"/>
+      <Message>In method com.gmsxo.domains.web.filter.LoginCheckFilter.init(FilterConfig)</Message>
+    </Method>
+    <Field classname="com.gmsxo.domains.web.filter.LoginCheckFilter" name="allowedURIs" signature="Ljava/util/List;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="com.gmsxo.domains.web.filter.LoginCheckFilter" sourcefile="LoginCheckFilter.java" sourcepath="com/gmsxo/domains/web/filter/LoginCheckFilter.java" relSourcepath="com\gmsxo\domains\web\filter\LoginCheckFilter.java">
+        <Message>In LoginCheckFilter.java</Message>
+      </SourceLine>
+      <Message>On field com.gmsxo.domains.web.filter.LoginCheckFilter.allowedURIs</Message>
+    </Field>
+    <SourceLine classname="com.gmsxo.domains.web.filter.LoginCheckFilter" primary="true" start="32" end="33" startBytecode="8" endBytecode="21" sourcefile="LoginCheckFilter.java" sourcepath="com/gmsxo/domains/web/filter/LoginCheckFilter.java" relSourcepath="com\gmsxo\domains\web\filter\LoginCheckFilter.java">
+      <Message>At LoginCheckFilter.java:[lines 32-33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern type="WA_NOT_IN_LOOP" abbrev="Wa" category="MT_CORRECTNESS">
+    <ShortDescription>Wait not in loop </ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a call to <code>java.lang.Object.wait()</code>
+  which is not in a loop.&nbsp; If the monitor is used for multiple conditions,
+  the condition the caller intended to wait for might not be the one
+  that actually occurred.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="IS2_INCONSISTENT_SYNC" abbrev="IS" category="MT_CORRECTNESS">
+    <ShortDescription>Inconsistent synchronization</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The fields of this class appear to be accessed inconsistently with respect
+  to synchronization.&nbsp; This bug report indicates that the bug pattern detector
+  judged that
+  </p>
+  <ul>
+  <li> The class contains a mix of locked and unlocked accesses,</li>
+  <li> At least one locked access was performed by one of the class's own methods, and</li>
+  <li> The number of unsynchronized field accesses (reads and writes) was no more than
+       one third of all accesses, with writes being weighed twice as high as reads</li>
+  </ul>
+
+  <p> A typical bug matching this bug pattern is forgetting to synchronize
+  one of the methods in a class that is intended to be thread-safe.</p>
+
+  <p> You can select the nodes labeled "Unsynchronized access" to show the
+  code locations where the detector believed that a field was accessed
+  without synchronization.</p>
+
+  <p> Note that there are various sources of inaccuracy in this detector;
+  for example, the detector cannot statically detect all situations in which
+  a lock is held.&nbsp; Also, even when the detector is accurate in
+  distinguishing locked vs. unlocked accesses, the code in question may still
+  be correct.</p>
+
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="IC_INIT_CIRCULARITY" abbrev="IC" category="STYLE">
+    <ShortDescription>Initialization circularity</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A circularity was detected in the static initializers of the two
+  classes referenced by the bug instance.&nbsp; Many kinds of unexpected
+  behavior may arise from such circularity.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" abbrev="Eq" category="BAD_PRACTICE">
+    <ShortDescription>Equals checks for incompatible operand</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This equals method is checking to see if the argument is some incompatible type
+(i.e., a class that is neither a supertype nor subtype of the class that defines
+the equals method). For example, the Foo class might have an equals method
+that looks like:
+
+<p><code><pre>
+public boolean equals(Object o) {
+  if (o instanceof Foo)
+    return name.equals(((Foo)o).name);
+  else if (o instanceof String)
+    return name.equals(o);
+  else return false;
+</pre></code></p>
+
+<p>This is considered bad practice, as it makes it very hard to implement an equals method that
+is symmetric and transitive. Without those properties, very unexpected behavoirs are possible.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" abbrev="RCN" category="CORRECTNESS">
+    <ShortDescription>Nullcheck of value previously dereferenced</ShortDescription>
+    <Details><![CDATA[
+
+<p> A value is checked here to see whether it is null, but this value can't
+be null because it was previously dereferenced and if it were null a null pointer
+exception would have occurred at the earlier dereference.
+Essentially, this code and the previous dereference
+disagree as to whether this value is allowed to be null. Either the check is redundant
+or the previous dereference is erroneous.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="LI_LAZY_INIT_UPDATE_STATIC" abbrev="LI" category="MT_CORRECTNESS" cweid="543">
+    <ShortDescription>Incorrect lazy initialization and update of static field</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains an unsynchronized lazy initialization of a static field.
+After the field is set, the object stored into that location is further updated or accessed.
+The setting of the field is visible to other threads as soon as it is set. If the
+futher accesses in the method that set the field serve to initialize the object, then
+you have a <em>very serious</em> multithreading bug, unless something else prevents
+any other thread from accessing the stored object until it is fully initialized.
+</p>
+<p>Even if you feel confident that the method is never called by multiple
+threads, it might be better to not set the static field until the value
+you are setting it to is fully populated/initialized.
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_MUTABLE_ARRAY" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable array</ShortDescription>
+    <Details><![CDATA[
+
+<p> A final static field references an array
+   and can be accessed by malicious code or
+        by accident from another package.
+   This code can freely modify the contents of the array.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_EXIT" abbrev="Dm" category="BAD_PRACTICE" cweid="382">
+    <ShortDescription>Method invokes System.exit(...)</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Invoking System.exit shuts down the entire Java virtual machine. This
+   should only been done when it is appropriate. Such calls make it
+   hard or impossible for your code to be invoked by other code.
+   Consider throwing a RuntimeException instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was nonnull).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because FindBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="IS" cweid="366">
+    <Description>Inconsistent synchronization</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Wa">
+    <Description>Wait not in loop</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="LI">
+    <Description>Unsynchronized Lazy Initialization</Description>
+  </BugCode>
+  <BugCode abbrev="IC">
+    <Description>Initialization circularity</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletContextListener</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.annotation.WebServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 29 Nov 2013 20:48:10 +0100" total_classes="122" referenced_classes="383" total_bugs="50" total_size="6660" num_packages="25" vm_version="24.45-b08" cpu_seconds="79.59" clock_seconds="28.43" peak_mbytes="515.33" alloc_mbytes="1363.50" gc_seconds="0.91" priority_2="40" priority_1="10">
+    <FileStats path="com/gmsxo/domains/CallPsql.java" bugCount="0" size="20"/>
+    <FileStats path="com/gmsxo/domains/CheckDb.java" bugCount="0" size="18"/>
+    <FileStats path="com/gmsxo/domains/CountLines.java" bugCount="0" size="9"/>
+    <FileStats path="com/gmsxo/domains/CreateSql.java" bugCount="0" size="9"/>
+    <FileStats path="com/gmsxo/domains/CutFileIntoParts.java" bugCount="0" size="9"/>
+    <FileStats path="com/gmsxo/domains/EmptyLine.java" bugCount="0" size="30"/>
+    <FileStats path="com/gmsxo/domains/HelloWorld.java" bugCount="0" size="9"/>
+    <FileStats path="com/gmsxo/domains/PLSql.java" bugCount="0" size="16"/>
+    <FileStats path="com/gmsxo/domains/RegexpTest.java" bugCount="1" size="34" bugHash="5c79a735293543a639a518e59a3cc8dc"/>
+    <FileStats path="com/gmsxo/domains/StackOverflow.java" bugCount="0" size="13"/>
+    <FileStats path="com/gmsxo/domains/TestMapMem.java" bugCount="0" size="40"/>
+    <FileStats path="com/gmsxo/domains/ThreadLauncher.java" bugCount="0" size="29"/>
+    <FileStats path="com/gmsxo/domains/config/AppConfig.java" bugCount="1" size="26" bugHash="8b6b05f2890a50f0a5b3c4838bb3ff14"/>
+    <FileStats path="com/gmsxo/domains/config/ConfigLoader.java" bugCount="0" size="23"/>
+    <FileStats path="com/gmsxo/domains/controller/DaemonThreadFactory.java" bugCount="0" size="15"/>
+    <FileStats path="com/gmsxo/domains/controller/ThreadController.java" bugCount="1" size="73" bugHash="9e2fd085490cd6adc2a73b85282ebdd2"/>
+    <FileStats path="com/gmsxo/domains/controller/TryIt.java" bugCount="0" size="7"/>
+    <FileStats path="com/gmsxo/domains/data/AppClass.java" bugCount="0" size="38"/>
+    <FileStats path="com/gmsxo/domains/data/AppConfigData.java" bugCount="0" size="50"/>
+    <FileStats path="com/gmsxo/domains/data/AppThread.java" bugCount="0" size="46"/>
+    <FileStats path="com/gmsxo/domains/data/DnsServer.java" bugCount="0" size="53"/>
+    <FileStats path="com/gmsxo/domains/data/Domain.java" bugCount="0" size="71"/>
+    <FileStats path="com/gmsxo/domains/data/Insertable.java" bugCount="0" size="6"/>
+    <FileStats path="com/gmsxo/domains/data/IpAddress.java" bugCount="1" size="91" bugHash="119da52c27ac635582edad1cab457f50"/>
+    <FileStats path="com/gmsxo/domains/data/Role.java" bugCount="0" size="11"/>
+    <FileStats path="com/gmsxo/domains/data/User.java" bugCount="0" size="46"/>
+    <FileStats path="com/gmsxo/domains/db/DBFacade.java" bugCount="1" size="110" bugHash="1966d1b1a1f86f045935cb1670e8d921"/>
+    <FileStats path="com/gmsxo/domains/db/DBUtil.java" bugCount="0" size="69"/>
+    <FileStats path="com/gmsxo/domains/db/dao/DnsServerDAO.java" bugCount="0" size="31"/>
+    <FileStats path="com/gmsxo/domains/db/dao/DomainDAO.java" bugCount="0" size="23"/>
+    <FileStats path="com/gmsxo/domains/db/dao/GenericDAOHibernate.java" bugCount="0" size="92"/>
+    <FileStats path="com/gmsxo/domains/db/dao/IpAddressDAO.java" bugCount="0" size="31"/>
+    <FileStats path="com/gmsxo/domains/db/dao/UserDAO.java" bugCount="0" size="20"/>
+    <FileStats path="com/gmsxo/domains/db/facade/DnsServerFacade.java" bugCount="0" size="11"/>
+    <FileStats path="com/gmsxo/domains/db/facade/DomainFacade.java" bugCount="0" size="11"/>
+    <FileStats path="com/gmsxo/domains/db/facade/IpAddressFacade.java" bugCount="0" size="16"/>
+    <FileStats path="com/gmsxo/domains/db/facade/UserFacade.java" bugCount="0" size="12"/>
+    <FileStats path="com/gmsxo/domains/db/mb/AbstractMB.java" bugCount="0" size="21"/>
+    <FileStats path="com/gmsxo/domains/db/mb/DomainMB.java" bugCount="1" size="92" bugHash="a3967d0686fa351d40ffd9fec5092dfb"/>
+    <FileStats path="com/gmsxo/domains/db/mb/IpAddressMB.java" bugCount="0" size="166"/>
+    <FileStats path="com/gmsxo/domains/db/mb/LoginMB.java" bugCount="0" size="32"/>
+    <FileStats path="com/gmsxo/domains/db/mb/UserMB.java" bugCount="0" size="20"/>
+    <FileStats path="com/gmsxo/domains/dns/DNSLookup.java" bugCount="0" size="110"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/DnsClient.java" bugCount="2" size="353" bugHash="bd388ee11a7e90726e253c2eb2197a8d"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/DnsContext.java" bugCount="1" size="447" bugHash="9fd660933d3ffe600227f7110cbbe985"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/DnsContextFactory.java" bugCount="0" size="85"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/DnsName.java" bugCount="1" size="268" bugHash="549e0edde2dab8eefb2475c24ac010c7"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/DnsNameParser.java" bugCount="0" size="9"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/DnsUrl.java" bugCount="0" size="25"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/Header.java" bugCount="4" size="57" bugHash="2661f4ef251ccce2b466b5601ec68772"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/NameNode.java" bugCount="0" size="50"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/Resolver.java" bugCount="0" size="65"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/ResourceRecord.java" bugCount="2" size="299" bugHash="b0f08f6a46c8d5b893062864c68cfd55"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/ResourceRecords.java" bugCount="1" size="47" bugHash="86bda493731e9d00c43891e787ea92fb"/>
+    <FileStats path="com/gmsxo/domains/dns/dnsclient/ZoneNode.java" bugCount="0" size="68"/>
+    <FileStats path="com/gmsxo/domains/helpers/DNSHelper.java" bugCount="0" size="6"/>
+    <FileStats path="com/gmsxo/domains/helpers/FileHelper.java" bugCount="0" size="139"/>
+    <FileStats path="com/gmsxo/domains/helpers/ImportHelper.java" bugCount="1" size="42" bugHash="e1ca9f70e2d8c34d47073d6bd0cfe0b0"/>
+    <FileStats path="com/gmsxo/domains/helpers/Web.java" bugCount="0" size="21"/>
+    <FileStats path="com/gmsxo/domains/imports/DisassembleResFile.java" bugCount="0" size="25"/>
+    <FileStats path="com/gmsxo/domains/imports/ImportDNS.java" bugCount="3" size="96" bugHash="22323a97ad88e2bc72d7e21850ce735b"/>
+    <FileStats path="com/gmsxo/domains/imports/ImportLogAnalyzer.java" bugCount="0" size="60"/>
+    <FileStats path="com/gmsxo/domains/imports/InsertDomains.java" bugCount="5" size="362" bugHash="313ea7fb8c3a4a2882f44e5ac1544097"/>
+    <FileStats path="com/gmsxo/domains/imports/v1/InsertDomains.java" bugCount="6" size="344" bugHash="a352c953695e3704879ae0ffe38c1f37"/>
+    <FileStats path="com/gmsxo/domains/imports/v2/InsertDomains.java" bugCount="6" size="348" bugHash="066952d878b8c8f04f2a577eb39d81db"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/DomainExporter.java" bugCount="0" size="29"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/DomainLinkGenerator.java" bugCount="0" size="78"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/InputFileParser.java" bugCount="0" size="34"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/InsertDomains.java" bugCount="1" size="74" bugHash="355e8f15185998a070bb3e93663679e9"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/Inserter.java" bugCount="1" size="60" bugHash="b5900d815b11dca53e62965205b085fd"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/PgloaderCaller.java" bugCount="1" size="24" bugHash="01b64c38c1bdc54c38a24d1bc79b652d"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/TestInsert.java" bugCount="0" size="78"/>
+    <FileStats path="com/gmsxo/domains/imports/v3/TryThis.java" bugCount="0" size="20"/>
+    <FileStats path="com/gmsxo/domains/resolve/ExportToFileThread.java" bugCount="2" size="52" bugHash="f079653611788edda823acdaa6a4fa1b"/>
+    <FileStats path="com/gmsxo/domains/resolve/IPResolver.java" bugCount="4" size="128" bugHash="3fb09a7d6b3b2047ba437ec84637b788"/>
+    <FileStats path="com/gmsxo/domains/resolve/NSLookupThread.java" bugCount="1" size="54" bugHash="9ebf2cd4f1c32aa41049500c56b234d1"/>
+    <FileStats path="com/gmsxo/domains/resolve/v1/ExportToFileThread.java" bugCount="0" size="61"/>
+    <FileStats path="com/gmsxo/domains/resolve/v1/IPResolver.java" bugCount="0" size="235"/>
+    <FileStats path="com/gmsxo/domains/resolve/v1/NSLookupThread.java" bugCount="0" size="69"/>
+    <FileStats path="com/gmsxo/domains/resolve/v1/TryIt.java" bugCount="0" size="53"/>
+    <FileStats path="com/gmsxo/domains/servlet/ExecutorContextListener.java" bugCount="0" size="34"/>
+    <FileStats path="com/gmsxo/domains/update/TestUpdate.java" bugCount="1" size="96" bugHash="446f65667f08b8d1ee5b29ecbc8864e7"/>
+    <FileStats path="com/gmsxo/domains/update/TryThis.java" bugCount="0" size="39"/>
+    <FileStats path="com/gmsxo/domains/update/UpdateDomains.java" bugCount="0" size="239"/>
+    <FileStats path="com/gmsxo/domains/update/UpdateIpAddressServlet.java" bugCount="0" size="14"/>
+    <FileStats path="com/gmsxo/domains/update/UpdateIpAddressTable.java" bugCount="0" size="43"/>
+    <FileStats path="com/gmsxo/domains/web/AppListener.java" bugCount="0" size="7"/>
+    <FileStats path="com/gmsxo/domains/web/filter/AbstractFilter.java" bugCount="0" size="17"/>
+    <FileStats path="com/gmsxo/domains/web/filter/AdminPagesFilter.java" bugCount="0" size="21"/>
+    <FileStats path="com/gmsxo/domains/web/filter/DefaultUserPagesFilter.java" bugCount="0" size="21"/>
+    <FileStats path="com/gmsxo/domains/web/filter/LoginCheckFilter.java" bugCount="1" size="39" bugHash="0868247ff44892ea0ce3b2e1e6c38bcc"/>
+    <FileStats path="com/gmsxo/domains/web/rewriter/TryIt.java" bugCount="0" size="18"/>
+    <FileStats path="com/gmsxo/domains/web/rewriter/UrlRewriteFilter.java" bugCount="0" size="52"/>
+    <FileStats path="com/gmsxo/domains/web/util/JSFMessageUtil.java" bugCount="0" size="16"/>
+    <FileStats path="com/gmsxo/fileparser/FileParser.java" bugCount="0" size="43"/>
+    <FileStats path="com/gmsxo/httpclient/TryIt.java" bugCount="0" size="37"/>
+    <PackageStats package="com.gmsxo.domains" total_bugs="1" total_types="13" total_size="236" priority_2="1">
+      <ClassStats class="com.gmsxo.domains.CallPsql" sourceFile="CallPsql.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.CheckDb" sourceFile="CheckDb.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.CountLines" sourceFile="CountLines.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.CreateSql" sourceFile="CreateSql.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.CutFileIntoParts" sourceFile="CutFileIntoParts.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.EmptyLine" sourceFile="EmptyLine.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.HelloWorld" sourceFile="HelloWorld.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.PLSql" sourceFile="PLSql.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.RegexpTest" sourceFile="RegexpTest.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.SimpleThread" sourceFile="ThreadLauncher.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.StackOverflow" sourceFile="StackOverflow.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.TestMapMem" sourceFile="TestMapMem.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.ThreadLauncher" sourceFile="ThreadLauncher.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.config" total_bugs="1" total_types="2" total_size="49" priority_1="1">
+      <ClassStats class="com.gmsxo.domains.config.AppConfig" sourceFile="AppConfig.java" interface="false" size="26" bugs="1" priority_1="1"/>
+      <ClassStats class="com.gmsxo.domains.config.ConfigLoader" sourceFile="ConfigLoader.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.controller" total_bugs="1" total_types="4" total_size="95" priority_2="1">
+      <ClassStats class="com.gmsxo.domains.controller.DaemonThreadFactory" sourceFile="DaemonThreadFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.controller.ThreadController" sourceFile="ThreadController.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.controller.ThreadController$ExceptionHandler" sourceFile="ThreadController.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.controller.TryIt" sourceFile="TryIt.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.data" total_bugs="1" total_types="10" total_size="412" priority_1="1">
+      <ClassStats class="com.gmsxo.domains.data.AppClass" sourceFile="AppClass.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.AppConfigData" sourceFile="AppConfigData.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.AppThread" sourceFile="AppThread.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.AppThread$Status" sourceFile="AppThread.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.DnsServer" sourceFile="DnsServer.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.Domain" sourceFile="Domain.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.Insertable" sourceFile="Insertable.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.IpAddress" sourceFile="IpAddress.java" interface="false" size="91" bugs="1" priority_1="1"/>
+      <ClassStats class="com.gmsxo.domains.data.Role" sourceFile="Role.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.data.User" sourceFile="User.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.db" total_bugs="1" total_types="2" total_size="179" priority_2="1">
+      <ClassStats class="com.gmsxo.domains.db.DBFacade" sourceFile="DBFacade.java" interface="false" size="110" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.db.DBUtil" sourceFile="DBUtil.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.db.dao" total_bugs="0" total_types="5" total_size="197">
+      <ClassStats class="com.gmsxo.domains.db.dao.DnsServerDAO" sourceFile="DnsServerDAO.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.dao.DomainDAO" sourceFile="DomainDAO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.dao.GenericDAOHibernate" sourceFile="GenericDAOHibernate.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.dao.IpAddressDAO" sourceFile="IpAddressDAO.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.dao.UserDAO" sourceFile="UserDAO.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.db.facade" total_bugs="0" total_types="4" total_size="50">
+      <ClassStats class="com.gmsxo.domains.db.facade.DnsServerFacade" sourceFile="DnsServerFacade.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.facade.DomainFacade" sourceFile="DomainFacade.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.facade.IpAddressFacade" sourceFile="IpAddressFacade.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.facade.UserFacade" sourceFile="UserFacade.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.db.mb" total_bugs="1" total_types="6" total_size="331" priority_2="1">
+      <ClassStats class="com.gmsxo.domains.db.mb.AbstractMB" sourceFile="AbstractMB.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.mb.DomainMB" sourceFile="DomainMB.java" interface="false" size="92" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.db.mb.IpAddressMB" sourceFile="IpAddressMB.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.mb.IpAddressMB$Column" sourceFile="IpAddressMB.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.mb.LoginMB" sourceFile="LoginMB.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.db.mb.UserMB" sourceFile="UserMB.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.dns" total_bugs="0" total_types="1" total_size="110">
+      <ClassStats class="com.gmsxo.domains.dns.DNSLookup" sourceFile="DNSLookup.java" interface="false" size="110" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.dns.dnsclient" total_bugs="11" total_types="18" total_size="1773" priority_2="9" priority_1="2">
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.BindingEnumeration" sourceFile="DnsContext.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.CT" sourceFile="DnsContext.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.DnsClient" sourceFile="DnsClient.java" interface="false" size="307" bugs="2" priority_2="2"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.DnsContext" sourceFile="DnsContext.java" interface="false" size="382" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.DnsContextFactory" sourceFile="DnsContextFactory.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.DnsName" sourceFile="DnsName.java" interface="false" size="255" bugs="1" priority_1="1"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.DnsName$1" sourceFile="DnsName.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.DnsNameParser" sourceFile="DnsNameParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.DnsUrl" sourceFile="DnsUrl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.Header" sourceFile="Header.java" interface="false" size="57" bugs="4" priority_2="4"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.NameClassPairEnumeration" sourceFile="DnsContext.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.NameNode" sourceFile="NameNode.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.Packet" sourceFile="DnsClient.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.Resolver" sourceFile="Resolver.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.ResourceRecord" sourceFile="ResourceRecord.java" interface="false" size="299" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.ResourceRecords" sourceFile="ResourceRecords.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.Tcp" sourceFile="DnsClient.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.dns.dnsclient.ZoneNode" sourceFile="ZoneNode.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.helpers" total_bugs="1" total_types="4" total_size="208" priority_1="1">
+      <ClassStats class="com.gmsxo.domains.helpers.DNSHelper" sourceFile="DNSHelper.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.helpers.FileHelper" sourceFile="FileHelper.java" interface="false" size="139" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.helpers.ImportHelper" sourceFile="ImportHelper.java" interface="false" size="42" bugs="1" priority_1="1"/>
+      <ClassStats class="com.gmsxo.domains.helpers.Web" sourceFile="Web.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.imports" total_bugs="8" total_types="7" total_size="543" priority_2="7" priority_1="1">
+      <ClassStats class="com.gmsxo.domains.imports.DisassembleResFile" sourceFile="DisassembleResFile.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.ImportDNS" sourceFile="ImportDNS.java" interface="false" size="96" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.ImportLogAnalyzer" sourceFile="ImportLogAnalyzer.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.InsertDNSThread" sourceFile="InsertDomains.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.InsertDomains" sourceFile="InsertDomains.java" interface="false" size="212" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.InsertDomainsThread" sourceFile="InsertDomains.java" interface="false" size="78" bugs="2" priority_2="2"/>
+      <ClassStats class="com.gmsxo.domains.imports.InsertIPThread" sourceFile="InsertDomains.java" interface="false" size="37" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.imports.v1" total_bugs="6" total_types="4" total_size="344" priority_2="6">
+      <ClassStats class="com.gmsxo.domains.imports.v1.InsertDNSThread" sourceFile="InsertDomains.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.v1.InsertDomains" sourceFile="InsertDomains.java" interface="false" size="206" bugs="2" priority_2="2"/>
+      <ClassStats class="com.gmsxo.domains.imports.v1.InsertDomainsThread" sourceFile="InsertDomains.java" interface="false" size="66" bugs="2" priority_2="2"/>
+      <ClassStats class="com.gmsxo.domains.imports.v1.InsertIPThread" sourceFile="InsertDomains.java" interface="false" size="37" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.imports.v2" total_bugs="6" total_types="4" total_size="348" priority_2="6">
+      <ClassStats class="com.gmsxo.domains.imports.v2.InsertDNSThread" sourceFile="InsertDomains.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.v2.InsertDomains" sourceFile="InsertDomains.java" interface="false" size="208" bugs="2" priority_2="2"/>
+      <ClassStats class="com.gmsxo.domains.imports.v2.InsertDomainsThread" sourceFile="InsertDomains.java" interface="false" size="68" bugs="2" priority_2="2"/>
+      <ClassStats class="com.gmsxo.domains.imports.v2.InsertIPThread" sourceFile="InsertDomains.java" interface="false" size="37" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.imports.v3" total_bugs="3" total_types="10" total_size="397" priority_2="3">
+      <ClassStats class="com.gmsxo.domains.imports.v3.DomainExporter" sourceFile="DomainExporter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.DomainLinkGenerator" sourceFile="DomainLinkGenerator.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.DomainLinkGeneratorThread" sourceFile="DomainLinkGenerator.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.InputFileParser" sourceFile="InputFileParser.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.InsertDomains" sourceFile="InsertDomains.java" interface="false" size="74" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.Inserter" sourceFile="Inserter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.InserterThread" sourceFile="Inserter.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.PgloaderCaller" sourceFile="PgloaderCaller.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.TestInsert" sourceFile="TestInsert.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.imports.v3.TryThis" sourceFile="TryThis.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.resolve" total_bugs="7" total_types="4" total_size="234" priority_2="4" priority_1="3">
+      <ClassStats class="com.gmsxo.domains.resolve.ExportToFileThread" sourceFile="ExportToFileThread.java" interface="false" size="52" bugs="2" priority_2="2"/>
+      <ClassStats class="com.gmsxo.domains.resolve.IPResolver" sourceFile="IPResolver.java" interface="false" size="128" bugs="4" priority_2="1" priority_1="3"/>
+      <ClassStats class="com.gmsxo.domains.resolve.NSLookupThread" sourceFile="NSLookupThread.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.resolve.NSLookupThread$Result" sourceFile="NSLookupThread.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.resolve.v1" total_bugs="0" total_types="8" total_size="418">
+      <ClassStats class="com.gmsxo.domains.resolve.v1.ExportToFileThread" sourceFile="ExportToFileThread.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.resolve.v1.ExportToFileThread$ExceptionHandler" sourceFile="ExportToFileThread.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.resolve.v1.IPResolver" sourceFile="IPResolver.java" interface="false" size="225" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.resolve.v1.IPResolver$1" sourceFile="IPResolver.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.resolve.v1.MyThread" sourceFile="TryIt.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.resolve.v1.NSLookupThread" sourceFile="NSLookupThread.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.resolve.v1.NSLookupThread$NSLookupResult" sourceFile="NSLookupThread.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.resolve.v1.TryIt" sourceFile="TryIt.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.servlet" total_bugs="0" total_types="1" total_size="34">
+      <ClassStats class="com.gmsxo.domains.servlet.ExecutorContextListener" sourceFile="ExecutorContextListener.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.update" total_bugs="1" total_types="5" total_size="431" priority_2="1">
+      <ClassStats class="com.gmsxo.domains.update.TestUpdate" sourceFile="TestUpdate.java" interface="false" size="96" bugs="1" priority_2="1"/>
+      <ClassStats class="com.gmsxo.domains.update.TryThis" sourceFile="TryThis.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.update.UpdateDomains" sourceFile="UpdateDomains.java" interface="false" size="239" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.update.UpdateIpAddressServlet" sourceFile="UpdateIpAddressServlet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.update.UpdateIpAddressTable" sourceFile="UpdateIpAddressTable.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.web" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.gmsxo.domains.web.AppListener" sourceFile="AppListener.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.web.filter" total_bugs="1" total_types="4" total_size="98" priority_1="1">
+      <ClassStats class="com.gmsxo.domains.web.filter.AbstractFilter" sourceFile="AbstractFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.web.filter.AdminPagesFilter" sourceFile="AdminPagesFilter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.web.filter.DefaultUserPagesFilter" sourceFile="DefaultUserPagesFilter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.web.filter.LoginCheckFilter" sourceFile="LoginCheckFilter.java" interface="false" size="39" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.web.rewriter" total_bugs="0" total_types="2" total_size="70">
+      <ClassStats class="com.gmsxo.domains.web.rewriter.TryIt" sourceFile="TryIt.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.gmsxo.domains.web.rewriter.UrlRewriteFilter" sourceFile="UrlRewriteFilter.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.domains.web.util" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.gmsxo.domains.web.util.JSFMessageUtil" sourceFile="JSFMessageUtil.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.fileparser" total_bugs="0" total_types="1" total_size="43">
+      <ClassStats class="com.gmsxo.fileparser.FileParser" sourceFile="FileParser.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gmsxo.httpclient" total_bugs="0" total_types="1" total_size="37">
+      <ClassStats class="com.gmsxo.httpclient.TryIt" sourceFile="TryIt.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="2314" invocations="920" avgMicrosecondsPerInvocation="2515" maxMicrosecondsPerInvocation="76187" standardDeviationMircosecondsPerInvocation="6838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="1742" invocations="383" avgMicrosecondsPerInvocation="4548" maxMicrosecondsPerInvocation="76295" standardDeviationMircosecondsPerInvocation="10946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1665" invocations="1431" avgMicrosecondsPerInvocation="1163" maxMicrosecondsPerInvocation="174071" standardDeviationMircosecondsPerInvocation="5719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1476" invocations="891" avgMicrosecondsPerInvocation="1656" maxMicrosecondsPerInvocation="43208" standardDeviationMircosecondsPerInvocation="4125"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1446" invocations="807" avgMicrosecondsPerInvocation="1792" maxMicrosecondsPerInvocation="493002" standardDeviationMircosecondsPerInvocation="17850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="1409" invocations="383" avgMicrosecondsPerInvocation="3679" maxMicrosecondsPerInvocation="75277" standardDeviationMircosecondsPerInvocation="8770"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1398" invocations="837" avgMicrosecondsPerInvocation="1671" maxMicrosecondsPerInvocation="65460" standardDeviationMircosecondsPerInvocation="4659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1147" invocations="1436" avgMicrosecondsPerInvocation="798" maxMicrosecondsPerInvocation="24486" standardDeviationMircosecondsPerInvocation="1039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="1040" invocations="383" avgMicrosecondsPerInvocation="2716" maxMicrosecondsPerInvocation="85737" standardDeviationMircosecondsPerInvocation="8547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1006" invocations="792" avgMicrosecondsPerInvocation="1270" maxMicrosecondsPerInvocation="97520" standardDeviationMircosecondsPerInvocation="4114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="969" invocations="1474" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="27471" standardDeviationMircosecondsPerInvocation="1845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="876" invocations="718" avgMicrosecondsPerInvocation="1220" maxMicrosecondsPerInvocation="39442" standardDeviationMircosecondsPerInvocation="3200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="600" invocations="837" avgMicrosecondsPerInvocation="717" maxMicrosecondsPerInvocation="14832" standardDeviationMircosecondsPerInvocation="1295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="533" invocations="120" avgMicrosecondsPerInvocation="4445" maxMicrosecondsPerInvocation="31049" standardDeviationMircosecondsPerInvocation="7272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="361" invocations="383" avgMicrosecondsPerInvocation="945" maxMicrosecondsPerInvocation="17400" standardDeviationMircosecondsPerInvocation="2081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="336" invocations="383" avgMicrosecondsPerInvocation="878" maxMicrosecondsPerInvocation="13492" standardDeviationMircosecondsPerInvocation="1660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="318" invocations="513" avgMicrosecondsPerInvocation="620" maxMicrosecondsPerInvocation="30662" standardDeviationMircosecondsPerInvocation="1677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="317" invocations="383" avgMicrosecondsPerInvocation="829" maxMicrosecondsPerInvocation="21631" standardDeviationMircosecondsPerInvocation="2419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="279" invocations="383" avgMicrosecondsPerInvocation="728" maxMicrosecondsPerInvocation="37748" standardDeviationMircosecondsPerInvocation="2378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="276" invocations="122" avgMicrosecondsPerInvocation="2268" maxMicrosecondsPerInvocation="74960" standardDeviationMircosecondsPerInvocation="6933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="250" invocations="383" avgMicrosecondsPerInvocation="655" maxMicrosecondsPerInvocation="10751" standardDeviationMircosecondsPerInvocation="1441"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

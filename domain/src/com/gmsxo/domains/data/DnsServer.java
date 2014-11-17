@@ -25,6 +25,8 @@ import org.hibernate.annotations.NamedQuery;
   @NamedQuery(name = "DnsServer.findById",   query = "SELECT a FROM DnsServer a WHERE a.id = :id"),
   @NamedQuery(name = "DnsServer.findByName", query = "SELECT a FROM DnsServer a WHERE a.name = :name")})
 public class DnsServer implements Serializable, Comparable<DnsServer>, Insertable { private static final long serialVersionUID = -5122932828021960917L;
+  public static final String FIND_BY_ID="Domain.findById";
+  public static final String FIND_BY_NAME="Domain.findByName";
 
   @Id
   @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="DNSServerIdSeq")

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition>
+    <h:form style="padding-left:15%;padding-right:15%;" id="ipAddressesForm">
+      <div style="text-align:center;width: 100%;">
+       <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.hideLeft}" action="#{ipAddressMB.moveLeft}" value="Prev" ajax="false" style="font-size: 15px;"/></div>  
+       <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.hideRight}" action="#{ipAddressMB.moveRight}" value="Next" ajax="false" style="font-size: 15px;"/></div>
+      </div>
+      
+      <table style="width:100%;">
+        <tr>
+		      <td style="vertical-align:top;width:33.3%;"><p:dataTable style="width:100%;padding-top:10px;padding-bottom:10px;" id="domainsTable0" value="#{ipAddressMB.domains0}" var="domains0" emptyMessage="#{bundle.noRecords}" paginator="false">
+		         <p:column>
+		           <f:facet name="header">
+		             <div style="margin-right:6px;text-align:center;width: 100%;">
+                  <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.upHide0}" action="#{ipAddressMB.up0}" value="Up" ajax="false" style="font-size: 15px;"/></div>  
+                  <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><h:outputText value="#{ipAddressMB.ipAddress0.address}" /></div>  
+                  <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.downHide0}" action="#{ipAddressMB.down0}" value="Down" ajax="false" style="font-size: 15px;"/></div>
+                 </div>
+		           </f:facet>
+	             <h:outputLink value="http://#{domains0.name}" target="_blank">#{domains0.name}</h:outputLink>
+		           <f:facet name="footer">  
+            </f:facet>  
+		         </p:column>
+		      </p:dataTable></td>
+          <td style="vertical-align:top;width:33.3%;"><p:dataTable style="width:100%;padding-top:10px;padding-bottom:10px;" id="domainsTable1" value="#{ipAddressMB.domains1}" var="domains1" emptyMessage="#{bundle.noRecords}" paginator="false">
+             <p:column>
+               <f:facet name="header">
+                <div style="margin-right:6px;text-align:center;width: 100%;">
+                 <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.upHide1}" action="#{ipAddressMB.up1}" value="Up" ajax="false" style="font-size: 15px;"/></div>  
+                 <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><h:outputText value="#{ipAddressMB.ipAddress1.address}" /></div>
+                 <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.downHide1}" action="#{ipAddressMB.down1}" value="Down" ajax="false" style="font-size: 15px;"/></div>
+                </div>
+               </f:facet>
+               <h:outputLink value="http://#{domains1.name}" target="_blank">#{domains1.name}</h:outputLink>
+               <f:facet name="footer">  
+            </f:facet>  
+             </p:column>
+          </p:dataTable></td>
+          <td style="vertical-align:top;width:33.3%;"><p:dataTable style="width:100%;padding-top:10px;padding-bottom:10px;" id="domainsTable2" value="#{ipAddressMB.domains2}" var="domains2" emptyMessage="#{bundle.noRecords}" paginator="false">
+             <p:column>
+               <f:facet name="header">
+                <div style="margin-right:6px;text-align:center;width: 100%;">
+					       <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.upHide2}" action="#{ipAddressMB.up2}" value="Up" ajax="false" style="font-size: 15px;"/></div>  
+					       <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><h:outputText value="#{ipAddressMB.ipAddress2.address}" /></div>
+					       <div style="display: inline-block;padding-top:3px;padding-bottom:3px;"><p:commandButton disabled="#{ipAddressMB.downHide2}" action="#{ipAddressMB.down2}" value="Down" ajax="false" style="font-size: 15px;"/></div>
+					      </div>
+               </f:facet>
+               <h:outputLink value="http://#{domains2.name}" target="_blank">#{domains2.name}</h:outputLink>
+               <f:facet name="footer">  
+            </f:facet>  
+             </p:column>
+          </p:dataTable></td>
+        </tr>
+      </table>
+		</h:form>
+	</ui:composition>
+</h:body>
+</html>

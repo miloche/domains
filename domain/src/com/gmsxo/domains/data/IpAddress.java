@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -29,6 +30,9 @@ import org.hibernate.annotations.NamedQuery;
   @NamedQuery(name = "IpAddress.findByAddress", query = "SELECT a FROM IpAddress a WHERE a.address = :address")})
 
 public class IpAddress implements Serializable, Comparable<IpAddress>, Insertable { private static final long serialVersionUID = -8796089977877378920L;
+
+  public static final String FIND_BY_ID="Domain.findById";
+  public static final String FIND_BY_ADDRESS="Domain.findByAddress";
 
   public static final Map<String,String> errorMap=new HashMap<>();
   static {
@@ -58,6 +62,9 @@ public class IpAddress implements Serializable, Comparable<IpAddress>, Insertabl
     
     @Index(name="IP_ADDRESS_ADDRESS_IDX")
     private String address;
+    
+    @Column(name="SORT_ADDRESS")
+    private String sortAddress;
     
     @OneToMany( fetch=FetchType.LAZY)
     @JoinTable(name="DOMAIN_IP_ADDRESS_LNK", joinColumns=@JoinColumn(name="DOMAIN_ID"),inverseJoinColumns=@JoinColumn(name="IP_ADDRESS_ID"))
@@ -93,6 +100,13 @@ public class IpAddress implements Serializable, Comparable<IpAddress>, Insertabl
       this.address = address;
       return this;
     }
+    public String getSortAddress() {
+      return sortAddress;
+    }
+    public IpAddress setSortAddress(String sortAddress) {
+      this.sortAddress = sortAddress;
+      return this;
+    }
     public List<Domain> getDomain() {
       return domain;
     }
@@ -118,7 +132,7 @@ public class IpAddress implements Serializable, Comparable<IpAddress>, Insertabl
     }
 
     @Override
-    public String toString() { return new StringBuilder("IPAddress [id=").append(getId()).append(", address=").append(getAddress()).append("]").toString(); }
+    public String toString() { return new StringBuilder("IPAddress [id=").append(getId()).append(", address=").append(getAddress()).append(", sortAddress=").append(getSortAddress()).append("]").toString(); }
     @Override
     public int compareTo(IpAddress o) { return this.getAddress().compareTo(o.getAddress())*(-1); } // without -1 a treeset has reverse order
     @Override

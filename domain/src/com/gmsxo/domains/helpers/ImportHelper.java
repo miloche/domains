@@ -11,6 +11,7 @@ public final class ImportHelper { private ImportHelper() {}
 
   
   public static final String[] pref = new String[] {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","digit","other"};
+  //public static final String[] pref = new String[] {"h"};
 
   public static int getCharIndex(String name) {
     String firstChar = name.substring(0, 1);
@@ -50,11 +51,10 @@ public final class ImportHelper { private ImportHelper() {}
 
       // this lines can be removed later, it was added because of a bug in IPResolver which caused duplicate dns in one output line. it's fixed now
       for (DnsServer dns:domain.getDnsServer()) {
-
         if (dns.getName().equals(dnsServerDomainName)) continue nextdnsserver;
       }
 
-      DnsServer dnsServer=null;//new DnsServer(dnsServerDomainName);
+      DnsServer dnsServer=null;
       if (dnsServerMap!=null) {
         dnsServer=dnsServerMap.get(dnsServerDomainName);
         if (dnsServer==null) dnsServerMap.put(dnsServerDomainName,dnsServer=new DnsServer(dnsServerDomainName));

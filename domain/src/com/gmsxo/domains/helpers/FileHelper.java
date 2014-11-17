@@ -97,7 +97,7 @@ public final class FileHelper {
     try (BufferedReader reader=Files.newBufferedReader(Paths.get(importFilePath),StandardCharsets.UTF_8)) {
       BufferedWriter writer = null;
       while (true) {
-        String line = reader.readLine();
+        String line=reader.readLine();
         if (line==null) break;
         if (!line.matches(DNSHelper.DOMAIN_IN_IMPORT_REGEX)) continue;
         String domainName=DNSLookup.formatDomain(line.split(" ",-1)[0],topLevel); // wouldn't work for other import files

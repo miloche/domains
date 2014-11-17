@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition>
+    <h:form style="padding-left:15%;padding-right:15%;" id="domainsForm">
+    <p:dataTable style="padding-top:10px;padding-bottom:10px;" id="domainTable" value="#{domainMB.selectedDomainName}" var="selectedDomainName" emptyMessage="#{bundle.noRecords}" paginator="false">
+         <p:column>
+           <f:facet name="header">
+             <h:outputText value="Domain" />
+           </f:facet>
+           <h:outputText value="#{selectedDomainName}" />
+         </p:column>
+      </p:dataTable>
+      <p:dataTable style="padding-top:10px;padding-bottom:10px;" id="ipTable" value="#{domainMB.ipAddress}" var="ip" emptyMessage="#{bundle.noRecords}" paginator="false">
+         <p:column>
+           <f:facet name="header">
+             <h:outputText value="IP Address" />
+           </f:facet>
+           <h:outputText value="#{ip.address}" />
+         </p:column>
+      </p:dataTable>
+      <p:dataTable id="dnsTable" value="#{domainMB.dnsServer}" var="dns" emptyMessage="#{bundle.noRecords}" paginator="false">
+         <p:column>
+            <f:facet name="header">
+               <h:outputText value="DNS Servers" />
+            </f:facet>
+            <h:outputText value="#{dns.name}" />
+         </p:column>
+       </p:dataTable>
+		</h:form>
+	</ui:composition>
+</h:body>
+</html>

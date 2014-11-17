@@ -2,6 +2,7 @@ package com.gmsxo.domains.resolve.v1;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.lang.Thread.UncaughtExceptionHandler;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,62 +20,81 @@ public class ExportToFileThread implements Runnable {
   private static final Logger LOG=Logger.getLogger(ExportToFileThread.class);
   private static final char   DELIMITER=' ';
   
-  private String outputFilePathName;
   private List<Domain> domains=new LinkedList<Domain>();
-  private boolean interrupted=false;
-  private String finalFile;
+  private String outputFilePathName;
+  private String finalFilePathName;
+  
+  private volatile boolean finished=false;
   
   public ExportToFileThread(String workingDir, String outputFileName, String exportDir, String partFileExt, String resultFileExt) {
     outputFilePathName=workingDir+outputFileName+partFileExt;
-    finalFile=exportDir+outputFileName+resultFileExt;
+    finalFilePathName=exportDir+outputFileName+resultFileExt;
   }
-
+  /**
+   * Waits for the domains in the list and writes them a the given file. When it's interrupted it renames the file with a given extension.
+   * 
+   * @see java.lang.Runnable#run() 
+   */
   @Override
   public void run() {
+    LOG.debug("run()");
     try (BufferedWriter output=Files.newBufferedWriter(Paths.get(outputFilePathName),StandardCharsets.UTF_8, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)) {
       List<Domain> domainsToWrite=null;
       while (true) {
-        domainsToWrite=getDomains();
+        try {
+          LOG.trace("run.getDomains()");
+          domainsToWrite=getDomains();
+        } catch (InterruptedException e) {
+          LOG.trace("run.interrupted");
+          output.flush();
+          output.close();
+          if (finished) Files.move(Paths.get(outputFilePathName), Paths.get(finalFilePathName), StandardCopyOption.REPLACE_EXISTING);
+          LOG.trace("run.moved");
+          break;
+        }
         for (Domain domain:domainsToWrite) {
           output.append(format(domain));
           output.newLine();
         }
-        if (interrupted) {
-          output.flush();
-          output.close();
-          Files.move(Paths.get(outputFilePathName), Paths.get(finalFile), StandardCopyOption.REPLACE_EXISTING);
-          LOG.debug("moved");
-          break;
-        }
       }
-    } catch (IOException e) { LOG.error("IO",e); } 
+    } catch (IOException e) { LOG.error("IO",e); }
+    LOG.debug("run() end");
   }
-  
-  public synchronized void addDomains(Domain domain) {
+  /**
+   * Set the finished flag to move the output file into the final folder.
+   */
+  public void finished() {finished=true;}
+  /**
+   * Adds a given domain into the domain list and notifies waiting thread to return the domain list.
+   * 
+   * @param domain
+   */
+  public synchronized void addDomain(Domain domain) {
+    LOG.debug("addDomain: "+domain);
     domains.add(domain);
     notify();
+    LOG.debug("addDomain end: "+domain);
   }
-  
-  private synchronized List<Domain> getDomains() {
-    if (domains.size()==0 || !interrupted)  try {  LOG.trace("waiting"); wait();  } catch (InterruptedException e) {  LOG.trace("interrupted"); interrupted=true;   }
-    List<Domain> retVal=domains;
-    domains=new LinkedList<Domain>();
-    return retVal;
-  }
-  
-  private static String format(Domain domain) {
-    StringBuilder sb=new StringBuilder();
-    sb.append(domain.getName()).append(DELIMITER);
-    sb.append(domain.getIpAddress().getAddress());
-    int dnsServersCount=domain.getDnsServer().size();
-    if (dnsServersCount>0) {
-      sb.append(DELIMITER);
-      int index=0;
-      for (DnsServer dns:domain.getDnsServer()) {
-        sb.append(dns.getName());
-        if (index++<dnsServersCount-1) sb.append(DELIMITER);
-      }
+  /**
+   * Returns the domain list to be exported to the file and assigns a new empty one to the list variable.
+   * 
+   * @return
+   * @throws InterruptedException
+   */
+  private synchronized List<Domain> getDomains() throws InterruptedException {
+    LOG.debug("getDomains()");
+    try {
+      while (domains.size()==0) wait();
+      List<Domain> retVal=domains;
+      domains=new LinkedList<Domain>();
+      return retVal;
     }
+    finally {LOG.debug("getDomains() end");}
+  }
+  private static String format(Domain domain) {
+    StringBuilder sb=new StringBuilder(domain.getName()).append(DELIMITER).append(domain.getIpAddress().getAddress());
+    for (DnsServer dns:domain.getDnsServer()) sb.append(DELIMITER).append(dns.getName());
     return sb.toString();
   }
+  static class ExceptionHandler implements UncaughtExceptionHandler {public void uncaughtException(Thread t, Throwable e) {LOG.error("uncaught",e);}}
 }

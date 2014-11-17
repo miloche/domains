@@ -1,0 +1,9 @@
+<Context path="/domains" docBase="${catalina.home}/wtpwebapps/domains" unloadDelay="10000">
+
+	<Manager className="org.apache.catalina.session.PersistentManager" saveOnRestart="false">
+		<Store className="org.apache.catalina.session.FileStore" />
+	</Manager>
+	
+	<ResourceLink name="jdbc/dm" global="jdbc/dm" type="javax.sql.DataSource" />
+</Context>
+

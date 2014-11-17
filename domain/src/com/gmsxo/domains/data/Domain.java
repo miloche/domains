@@ -31,6 +31,10 @@ import org.hibernate.annotations.NamedQuery;
   @NamedQuery(name = "Domain.findByName", query = "SELECT a FROM Domain a WHERE a.name = :name")})
 public class Domain implements Serializable, Comparable<Domain> { private static final long serialVersionUID = -8911470326504547499L;
 
+  public static final String FIND_BY_ID="Domain.findById";
+  public static final String FIND_BY_NAME="Domain.findByName";
+
+
   @Id
   @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="DomainIdSeq")
   @SequenceGenerator( name = "DomainIdSeq", sequenceName="DOMAIN_ID_SEQ", allocationSize=1, initialValue=1)

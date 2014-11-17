@@ -5,7 +5,7 @@
         <param name="File" value="C:/eclipse.352/workspace/domain/log/domain.log" />
         <layout class="org.apache.log4j.PatternLayout">
         <!-- param name="ConversionPattern" value="[%d{ISO8601}][%-25.25t][%-5.5p][%-60.60c][%m]%n" / -->
-            <param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-4.4t|%.1p|%c{2}|%m%n" />
+            <param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-25.25t|%.1p|%c{2}|%m%n" />
             
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
@@ -18,7 +18,7 @@
         <layout class="org.apache.log4j.PatternLayout">
         <!-- param name="ConversionPattern" value="[%d{ISO8601}][%-25.25t][%-5.5p][%m][%c][%F:%L]%n" / -->
         <!-- param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-4.4t|%.1p|%c{2}|%m|%F:%L%n" / -->
-        <param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-4.4t|%.5p|%c|%m|%F:%L%n" />
+        <param name="ConversionPattern" value="%d{HH:mm:ss,SSS}|%-25.25t|%.1p|%c|%m|%F:%L%n" />
         </layout>
         <filter class="org.apache.log4j.varia.LevelRangeFilter">
             <param name="LevelMin" value="DEBUG" />

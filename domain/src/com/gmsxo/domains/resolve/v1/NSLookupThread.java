@@ -16,75 +16,118 @@ import com.gmsxo.domains.data.IpAddress;
 import com.gmsxo.domains.dns.DNSLookup;
 import com.gmsxo.domains.helpers.DNSHelper;
 
-public class NSLookupThread implements Callable<NSLookupThread.Result> {
+/**
+ * A class to resolve the IP address for a given domain name by calling NS lookup of a given DNS server.
+ * 
+ * @author miloxe
+ *
+ */
+public class NSLookupThread implements Callable<NSLookupThread.NSLookupResult> {
   private static final Logger LOG = Logger.getLogger(NSLookupThread.class);
-  public static String topLevel;
   private Domain domain;
-  private int timeout;
+  private int    timeout;
+  private Attributes attrs;
   
-  public NSLookupThread(Domain domain, int timeout) { this.domain=domain; this.timeout=timeout;}
-  
-  private boolean parseAttributes(Domain domain, Attributes attrs) throws NamingException {
+  public NSLookupThread(Domain domain, int timeout) {this.domain=domain; this.timeout=timeout;}
+
+  /**
+   * Calls NS lookup for a given domain and DNS servers to resolve its IP address.
+   * It updates the IP address of the given domain object and set the error attribute of the result object if the result of the call was error.
+   * 
+   * @see java.util.concurrent.Callable#call()
+   */
+  @Override
+  public NSLookupResult call() {
+    try {
+      LOG.debug("Thr.st:"+domain);
+      if (domain==null) return new NSLookupResult(domain,true);
+      boolean wasError=false;
+      try {
+        attrs=DNSLookup.nsLookUp(domain.getName(), domain.getDnsServer(), timeout);
+        wasError=!parseAttributes();
+        LOG.trace("Thr.:"+wasError+" "+domain+" "+domain.getIpAddress()+" "+domain.getDnsServer());
+      } catch (NamingException e) {
+        LOG.debug(domain+"/"+e.getExplanation()+"/"+e.getResolvedName()+"/"+e.getRemainingName()+"/"+e.getMessage());
+        for(Entry<String, String> entry:IpAddress.errorMap.entrySet())
+          if (e.getExplanation()!=null&&e.getExplanation().contains(entry.getKey())) domain.setIpAddress(new IpAddress(entry.getValue()));
+        if (domain.getIpAddress()==null) domain.setIpAddress(new IpAddress("ERROR"));
+        wasError=true;
+      }
+      catch (Exception e) { LOG.info(domain+"/"+e.getMessage(),e); wasError=true;}
+      return new NSLookupResult(domain,wasError);
+    }
+    finally { LOG.debug("Thr.en:"+domain); }
+  }
+  /**
+   * Parse returned lookup attributes and extract the domain from them.
+   * 
+   * @param domain
+   * @param attrs
+   * @return
+   * @throws NamingException
+   */
+  private boolean parseAttributes() throws NamingException {
     boolean wasIpSet=true;
     if (attrs!=null) {
-      Attribute attrNS = attrs.get("NS");
-      if (attrNS!=null) {
-        NamingEnumeration<?> allNS = attrNS.getAll();
-        if (allNS!=null) next: while(allNS.hasMoreElements()) {
-          String dnsDomainName = DNSLookup.removeDot(allNS.next().toString().toLowerCase()).trim();
-          if (!dnsDomainName.matches(DNSHelper.DNS_CHECK_REGEX) && !dnsDomainName.matches(DNSHelper.IP_CHECK_REGEXP)) {
-            //LOG.warn("DNS doesn't match: "+dnsDomainName+" "+domain.getName());
-            continue next;
-          }
-          for (DnsServer dns:domain.getDnsServer()) if (dns.getName().equals(dnsDomainName)) continue next;
-          domain.addDnsServer(new DnsServer(dnsDomainName));
-        }
-      }
-  
-      Attribute attrA = attrs.get("A");
-      if (attrA!=null) {
-        String ip=(String)attrA.get();
-        LOG.debug("ip:"+ip);
-        if (ip!=null) domain.setIpAddress(new IpAddress(ip.trim()));
-        else domain.setIpAddress(new IpAddress(ip));
-      }
-      else {
-        wasIpSet=false;
-      }
+      extractDns();
+      wasIpSet=extractIp();
     }
-    LOG.debug(domain+" "+domain.getIpAddress());
+    LOG.trace(domain+" "+domain.getIpAddress());
     if (domain.getIpAddress()==null||domain.getIpAddress().getAddress()==null) {
-      LOG.debug("NULL_IP");
+      LOG.trace("NULL_IP");
       domain.setIpAddress(new IpAddress("NULL_IP"));
       wasIpSet=false;
     }
     return wasIpSet;
   }
-  
-  @Override
-  public Result call() throws Exception {
-    LOG.debug("Thr.:"+domain);
-    if (domain==null) return new Result(domain,true);
-    boolean wasError=false;
-    try {
-      wasError=!parseAttributes(domain, DNSLookup.nsLookUp(domain.getName(), domain.getDnsServer(), timeout));
-      LOG.debug("Thr.: wasError="+wasError);
-      LOG.debug("Thr.:"+domain+" "+(domain==null?"null":domain.getIpAddress())+" "+(domain==null?"null":domain.getDnsServer()));
-    } catch (NamingException e) {
-      LOG.debug(domain+"/"+e.getExplanation()+"/"+e.getResolvedName()+"/"+e.getRemainingName()+"/"+e.getMessage());
-      for(Entry<String, String> entry:IpAddress.errorMap.entrySet())
-        if (e.getExplanation()!=null&&e.getExplanation().contains(entry.getKey())) domain.setIpAddress(new IpAddress(entry.getValue()));
-      if (domain.getIpAddress()==null) domain.setIpAddress(new IpAddress("ERROR"));
-      wasError=true;
+  /**
+   * Extract DNS servers from lookup attributes and add them to domain.
+   * 
+   * @param domain
+   * @param attrs
+   * @throws NamingException
+   */
+  private void extractDns() throws NamingException {
+    Attribute attrNS = attrs.get("NS");
+    if (attrNS!=null) {
+      NamingEnumeration<?> allNS = attrNS.getAll();
+      if (allNS!=null) next: while(allNS.hasMoreElements()) { // go through all DNS servers
+        String dnsDomainName = DNSLookup.removeDot(allNS.next().toString().toLowerCase()).trim(); // remove the dot at the end of the name
+        if (!dnsDomainName.matches(DNSHelper.DNS_CHECK_REGEX) && !dnsDomainName.matches(DNSHelper.IP_CHECK_REGEXP)) continue next;
+        for (DnsServer dns:domain.getDnsServer()) if (dns.getName().equals(dnsDomainName)) continue next;
+        domain.addDnsServer(new DnsServer(dnsDomainName));
+      }
     }
-    catch (Exception e) { LOG.info(domain+"/"+e.getMessage(),e); wasError=true;}
-    return new Result(domain,wasError);
   }
-
-  public static class Result {
+  /**
+   * Parse IP address from lookup attributes and set it to domain.
+   * 
+   * @param domain
+   * @param attrs
+   * @return
+   * @throws NamingException
+   */
+  private boolean extractIp() throws NamingException {
+    Attribute attrA = attrs.get("A");
+    if (attrA!=null) {
+      String ip=(String)attrA.get();
+      LOG.debug("ip:"+ip);
+      if (ip!=null) domain.setIpAddress(new IpAddress(ip.trim()));
+      else domain.setIpAddress(new IpAddress());
+      return true;
+    }
+    else { return false;}
+  }
+  /**
+   * The thread result class.
+   * 
+   * @author miloxe
+   *
+   */
+  public static class NSLookupResult {
     private Domain domain;
     private boolean isError;
-    public Result(Domain domain){ this.domain=domain; } public Result(Domain domain,boolean error){this.domain=domain; this.isError=error;}
+    public NSLookupResult(Domain domain){ this.domain=domain; } public NSLookupResult(Domain domain,boolean error){this.domain=domain; this.isError=error;}
     public Domain getDomain(){return domain;}
     public boolean getIsError() {return isError;}
     @Override public String toString() { return new StringBuilder("Result [domain=").append(domain).append(", isError=").append(isError).append("]").toString(); }

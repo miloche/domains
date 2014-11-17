@@ -360,7 +360,8 @@ public final class DnsName implements Name {
             }
 
         } else if (n instanceof CompositeName) {
-            n = (DnsName) n;            // force ClassCastException
+            //n = (DnsName) n;            // force ClassCastException
+          throw new ClassCastException("forced");
 
         } else {                // "n" is a compound name, but not a DnsName.
             // Add labels least-significant first:  sometimes more efficient.
@@ -387,7 +388,8 @@ public final class DnsName implements Name {
      */
     private int compareRange(int beg, int end, Name n) {
         if (n instanceof CompositeName) {
-            n = (DnsName) n;                    // force ClassCastException
+            //n = (DnsName) n;                    // force ClassCastException
+            throw new ClassCastException("forced");
         }
         // Loop through labels, starting with most significant.
         int minSize = Math.min(end - beg, n.size());
